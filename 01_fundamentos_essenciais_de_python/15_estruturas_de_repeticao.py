@@ -48,3 +48,21 @@ else:
 
 
 
+# Função Range
+# é usada para produzir uma sequência de números inteiros a partir de um início (inclusivo) para um fim (exclusivo). 0 a 5 - 0 incluso mas 5 não, para no 4.
+# recebe 3 argumentos: stop (obrigatório), start (opcional) e step (opcional)
+list(range(4)) # [0,1,2,3] - o list transforma em uma lista
+
+for numero in range(0,11):
+    print(numero, end="")
+# 0 1 2 3 4 5 6 7 8 9 10
+
+# tabuada de 5
+for numero in range(0, 51, 5):
+    print(numero)
+    print(numero, end=" ")
+
+# 0 5 10 15 20 25 30 35 40 45 50
+
+
+
