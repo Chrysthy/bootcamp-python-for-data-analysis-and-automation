@@ -65,3 +65,15 @@ else:
     print("Sistema não reconheceu seu tipo de conta. Entre em contato com o seu gerente.")
 
 
+# Tecnicamente, não é obrigatório ter um else no final do código. 
+# O else só é necessário se você quiser tratar explicitamente todas as situações não contempladas pelos if e elif.
+
+
+
+# if ternário
+# é uma forma curta e elegante de escrever uma condição simples em uma única linha. Ele funciona como um "atalho" para o if-else.
+# Composto por 3 partes: 1-retorno caso expressão seja verdadeira. 2- expressão lógica. 3-retorno caso a expressão não seja atendida.
+# Para uma verificação simples
+status = "Sucesso" if saldo >= saque else "Falha"
+
+print(f"{status} ao realizar o saque!")
