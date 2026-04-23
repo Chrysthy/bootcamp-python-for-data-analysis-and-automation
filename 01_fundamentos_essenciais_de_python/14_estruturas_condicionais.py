@@ -20,3 +20,11 @@ if saldo < saque:
     print("Saldo insuficiente!")
 
 
+# if-else
+# O if-else permite tratar duas situações: quando a condição é verdadeira e quando é falsa.
+if saldo >= saque:
+    print("Realizando saque")
+else:
+    print("Saldo insuficiente!")
+
+
