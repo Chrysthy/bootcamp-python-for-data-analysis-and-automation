@@ -43,3 +43,25 @@ else:
 
 
 
+# if aninhado
+# Significa colocar uma estrutura if dentro de outra. Isso é útil quando você precisa verificar uma condição após já ter confirmado outra, criando uma hierarquia de decisões.
+if conta_normal:
+
+    if saldo >= saque:
+        print("Saque realizado com sucesso.")
+    elif saque <= (saldo + cheque_especial):
+        print("Saque realizado com o uso do cheque especial.")
+    else:
+        print("Não foi possível realizar o saque, saldo insuficiente.")
+
+elif conta_universitaria:
+
+    if saldo >= saque:
+        print("Saque realizado com sucesso.")
+    else:
+        print("Saque insuficiente")
+
+else: 
+    print("Sistema não reconheceu seu tipo de conta. Entre em contato com o seu gerente.")
+
+
