@@ -29,3 +29,22 @@ print() # adiciona uma quebra de linha
 
 
 
+# exemplo com repetição for/else
+# não é muito comum no dia a dia
+# O else associado ao for é executado quando o loop termina normalmente, ou seja, sem interrupções por um break.
+# O else em um for não significa “caso contrário” como no if. Ele é executado sempre que o loop terminar sem break.
+texto = input("Informe um texto: ")
+VOGAIS = "AEIOU"
+
+for letra in texto:
+    
+    if letra.upper() in VOGAIS:
+        print(letra, end="")
+
+else:
+    print() # adiciona uma quebra de linha
+    print("Executa no final do laço")
+
+
+
+
