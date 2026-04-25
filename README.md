@@ -11,3 +11,13 @@
   <a href="#-contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#support">Support</a>  
 </p>
+
+<br>
+
+## 📸 Screenshots
+
+<p align="center">
+  <img alt="Gif do Projeto" width="900" src=".github/gif-do-projeto.gif">
+</p>
+
+<br>
