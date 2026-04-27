@@ -84,7 +84,61 @@ else:
 
 
 
+# break & Variação continue
+# O break é uma instrução usada dentro de loops (for ou while) para interromper imediatamente a execução do loop, mesmo que a condição ainda seja verdadeira.
+# Quando o break é executado, o loop termina na hora e o fluxo do programa continua na primeira linha após o loop.
+# geralmente usado num loop infinito
+while True:
 
+    numero = int(input("Digite um número"))
+
+    if numero == 10:
+        break
+
+    print(numero)
+
+
+
+for numero in range(100):
+
+    if numero == 10:
+        break
+
+    print(numero, end=" ")
+
+
+
+
+# variação continue
+# não encerra o loop, mas pula para a próxima iteração, ignorando o que vem depois dele dentro do loop.
+while True:
+
+    numero = int(input("Digite um número"))
+    
+    if numero == 10:
+        break
+
+    if numero % 2 == 0:
+        continue
+
+
+    print(numero)
+
+
+
+
+for numero in range(10):
+
+    if numero % 2 != 0:  # se for ímpar
+        continue         # pula para o próximo
+
+    print(numero) # imprimi apenas os números pares
+
+
+
+
+# Use break quando quiser sair do loop.
+# Use continue quando quiser pular uma iteração específica, mas continuar no loop.
 
 
 
