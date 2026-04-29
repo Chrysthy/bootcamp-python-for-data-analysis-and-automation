@@ -21,4 +21,13 @@ print(palavra.lstrip())  # Remove espaços em branco apenas do lado esquerdo (in
 print(palavra.rstrip())  # Remove espaços em branco apenas do lado direito (final) da string
 
 
+# Junções e centralização
+palavra2 = "Python"
+
+print(palavra2.center(10, "#")) # Centraliza a string 'Python' em um espaço de largura 10, preenchendo os espaços restantes com o caractere '#'. O segundo caractere é opcional
+# Resultado: "##Python##"
+
+print(".".join(palavra2)) # Insere o caractere '.' entre cada letra da string 'Python'.
+# Resultado: "P.y.t.h.o.n"
+
 
