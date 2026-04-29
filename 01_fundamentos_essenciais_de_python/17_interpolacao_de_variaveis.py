@@ -101,8 +101,12 @@ print("Olá, me chamo {nome}. Eu tenho {idade} anos de idade, trabalho como {pro
 # ===========================================================================
 
 
+# Usando f-strings (Python 3.6+)
+nome = "Chrystine"
+idade = 25
 
-
+print(f"Meu nome é {nome} e tenho {idade} anos.")
+# Resultado: Meu nome é Chrystine e tenho 25 anos.
 
 
 
