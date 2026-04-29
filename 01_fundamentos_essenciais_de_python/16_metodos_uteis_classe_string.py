@@ -11,4 +11,14 @@ print(curso.lower())   # Converte todo o texto da variável 'curso' para letras 
 print(curso.title())   # Converte o texto para "Title Case", ou seja, cada palavra começa com letra maiúscula
 
 
+# Eliminando espaços em branco
+palavra = "   Python  "
+
+print(palavra.strip())   # Remove espaços em branco do início e do fim da string
+
+print(palavra.lstrip())  # Remove espaços em branco apenas do lado esquerdo (início) da string
+
+print(palavra.rstrip())  # Remove espaços em branco apenas do lado direito (final) da string
+
+
 
