@@ -104,10 +104,11 @@ print("Olá, me chamo {nome}. Eu tenho {idade} anos de idade, trabalho como {pro
 # Usando f-strings (Python 3.6+)
 nome = "Chrystine"
 idade = 25
+saldo = 45.435
 
-print(f"Meu nome é {nome} e tenho {idade} anos.")
-# Resultado: Meu nome é Chrystine e tenho 25 anos.
+print(f"Meu nome é {nome} e tenho {idade} anos. Saldo{saldo:10.2f}")
 
-
-
-
+# 10 → largura mínima de 10 caracteres (o número será alinhado à direita dentro desse espaço).
+# .2f → duas casas decimais no formato de ponto flutuante.
+# Como 45.435 arredonda para 45.44, o Python imprime esse valor com espaços à esquerda para completar os 10 caracteres.
+# o 10 é opcional porque só serve para formatação estética (alinhamento em tabelas, relatórios, etc.). O essencial é o .2f, que define quantas casas decimais serão mostradas.
