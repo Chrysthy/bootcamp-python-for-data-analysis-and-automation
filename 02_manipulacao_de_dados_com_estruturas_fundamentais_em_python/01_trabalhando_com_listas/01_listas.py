@@ -71,3 +71,20 @@ matriz[0]       # [1, "a", 2]
 matriz[0][0]    # 1
 matriz[0][-1]   # 2
 matriz[-1][-1]  # "c"
+
+
+# ===============================================================================
+
+# Fatiamento
+# Além de acessar elementos diretamente, podemos extrair um conjunto de valores de uma sequência. Para isso basta passar o índice inicial e/ou final para acessar o conjunto. 
+# Podemos ainda informar quantas posições o cursor deve "pular" no acesso.
+
+
+lista = ["p", "y", "t", "h", "o", "n"]
+
+lista[2:]    # começa no índice 2 até o final → ["t", "h", "o", "n"]
+lista[:2]    # do início até o índice 2 (sem incluir) → ["p", "y"]
+lista[1:3]   # do índice 1 ao 3 (sem incluir o 3) → ["y", "t"]
+lista[0:3:2] # do índice 0 ao 3, pulando de 2 em 2 → ["p", "t"]
+lista[::]    # lista inteira (cópia completa) → ["p", "y", "t", "h", "o", "n"]
+lista[::-1]  # passo -1, percorre ao contrário → ["n", "o", "h", "t", "y", "p"]
