@@ -36,3 +36,22 @@ carro = ['Ferrari', 'F8', 4_200_000.50, 2020, 2900, 'São Paulo', True]
 # True → bool
 
 
+# ===============================================================================
+
+# Acesso direto
+# Podemos acessar usando índices 
+# Contamos o índice de determinada sequeência a partir do zero.
+
+frutas = ['maça', 'laranja', 'uva', 'pera']
+
+print(frutas[0]) # maçã
+print(frutas[2]) # uva
+
+
+# índices negativos
+# Contagem começa com -1
+
+print(frutas[-1]) # pera
+print(frutas[-3]) # laranja
+
+
