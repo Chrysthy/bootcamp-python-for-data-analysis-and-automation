@@ -110,3 +110,39 @@ carros = ['gol', 'celta', 'palio']
 
 for indice, carro in enumerate(carros):
     print(f'{indice}: {carro}')
+
+
+
+# ===============================================================================
+# Compreensão de listas
+# oferece uma sintaxe mais curta quando queremos criar uma lista nova com base nos valores de uma lista existente (filtro) ou gerar uma nova lista aplicando alguma modificação nos elementos
+# de uma lista existente
+
+# Filtro versão 1
+numeros = [1, 30, 21, 2, 9, 65, 34]
+pares = []
+
+for numero in numeros:
+    if numero % 2  == 0:
+        pares.append(numero)
+
+
+
+# Filtro versão 2 list comprehension
+numeros = [1, 30, 21, 2, 9, 65, 34]
+pares = [numero for numero in numeros if numero % 2 == 0]
+
+
+
+# Modificando valores versão 1
+numeros = [1, 30, 21, 2, 9, 65, 34]
+quadrado = []
+
+for numero in numeros:
+    quadrado.append(numero ** 2)
+
+
+
+# Modificando valores versão 2 list comprehension
+numeros = [1, 30, 21, 2, 9, 65, 34]
+quadrado = [numero ** 2 for numero in numeros]
