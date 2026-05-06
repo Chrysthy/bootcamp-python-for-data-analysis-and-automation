@@ -88,3 +88,16 @@ lista[1:3]   # do índice 1 ao 3 (sem incluir o 3) → ["y", "t"]
 lista[0:3:2] # do índice 0 ao 3, pulando de 2 em 2 → ["p", "t"]
 lista[::]    # lista inteira (cópia completa) → ["p", "y", "t", "h", "o", "n"]
 lista[::-1]  # passo -1, percorre ao contrário → ["n", "o", "h", "t", "y", "p"]
+
+
+
+# ===============================================================================
+# Iterar Listas
+# A forma mais comum para percorrer os dados de uma lista é utilizando o comando for
+
+carros = ['gol', 'celta', 'palio']
+
+for carro in carros:
+    print(carro)
+
+
