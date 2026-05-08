@@ -17,7 +17,7 @@
 ## 📸 Screenshots
 
 <p align="center">
-  <img alt="Gif do Projeto" width="900" src=".github/gif-do-projeto.gif">
+  <img alt="Gif do Projeto" width="900" src=".github/analise-e-automacao-de-dado.png">
 </p>
 
 <br>
