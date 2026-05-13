@@ -17,3 +17,7 @@ print(numeros)       # resultado depende de quais foram removidos
 # Cada chamada de pop() remove um item arbitrário.
 
 # O resultado final pode ser diferente a cada vez que você roda o código.
+
+# O do professor deu resultado com remoção na frente e em ordem mas o set não possui ordem garantida como uma lista.
+# Porém, em algumas execuções/versões do Python, pode parecer que os elementos saem “em ordem”.
+# Isso acontece por causa da implementação interna da tabela hash, não porque exista garantia oficial.
