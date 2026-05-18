@@ -14,3 +14,9 @@ pessoa = dict(nome="Chrystine", idade=34)
 
 pessoa["telefone"] = "3333-1234"   # {"nome": "Chrystine", "idade": 34, "telefone": "3333-1234"}  
 # Adicionamos uma nova chave "telefone" ao dicionário já existente.
+
+
+pessoa["nome"] = "Noob"
+print(pessoa)
+
+# código mostra que dicionários em Python são mutáveis: você pode tanto adicionar novas chaves quanto modificar valores de chaves já existentes.
