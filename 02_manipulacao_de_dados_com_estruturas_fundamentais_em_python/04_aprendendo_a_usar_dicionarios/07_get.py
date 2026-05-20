@@ -13,7 +13,7 @@ contatos.get("chave")    # None
 
 
 # Se a chave não existe, retorna o valor que você passou (nesse caso {}).
-contatos.get("chave", {})    # {}
+contatos.get("chave", {})    # {} retorna um dicionário vazio
 contatos.get("guilherme@gmail.com", {})    # {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}}
 
 
