@@ -9,7 +9,17 @@ salario = 2000 # variável com escopo global, está fora da função
 
 def salario_bonus(bonus):
     global salario # global para informar que estamos pegando a variável de escopo global
+
+   lista_auxiliar = lista.copy() # quando colocamos um objeto mutável, temos sempre que lembrar de criar uma cópia dele para que ele não altere a refeência externa.
+   lista_auxiliar.append(2) 
+   print(f"Lista aux = {lista_auxiliar}") 
+
     salario += bonus
     return salario
 
-salario_bonus(500) # 2500
+
+lista = [1] 
+
+salario_com_bonus = salario_bonus(500, lista) # 2500
+print(salario_com_bonus)
+print(lista)
