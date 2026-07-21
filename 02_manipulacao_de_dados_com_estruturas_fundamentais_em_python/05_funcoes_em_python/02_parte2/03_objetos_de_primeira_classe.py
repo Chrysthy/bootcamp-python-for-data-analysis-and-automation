@@ -24,3 +24,18 @@ exibir_resultado(10, 10, somar)  # O resultado da operação 10 + 10 = 20
 exibir_resultado(10, 10, subtrair) # O resultado da operação 10 + 10 = 0
 exibir_resultado(10, 10, test) # O resultado da operação 10 + 10 = 50  
 # (porque 10 × 2 + 10  × 3 = 20 + 30 = 50)
+
+
+# Atribuindo a função somar à variável operacao (apontamento)
+# não está executando a função. Está guardando uma referência da função somar na variável operacao. 
+operacao = somar
+print(operacao(1,23))
+
+
+# Por isso, depois, pode chamá-la normalmente:
+
+operacao(1, 23)
+
+# É o mesmo que fazer:
+
+somar(1, 23)
