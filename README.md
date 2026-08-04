@@ -21,3 +21,10 @@
 </p>
 
 <br>
+
+## 🛠 Technologies
+
+* Python
+* Git e GitHub
+
+<br>
