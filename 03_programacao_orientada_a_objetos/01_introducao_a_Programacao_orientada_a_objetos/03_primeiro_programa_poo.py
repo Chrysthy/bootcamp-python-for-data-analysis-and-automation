@@ -17,6 +17,7 @@ class Bicicleta:
         self.ano = ano
         self.valor = valor
         self.aro = aro
+        self.marcha = 1
 
 
     # métodos são funções que estão dentro de uma classe. Sempre precisa passar um argumento, que é o self
@@ -30,9 +31,15 @@ class Bicicleta:
     def correr(self):
         print("Vrummmm...")
 
-    def trocar_marcha(nro_marcha): # um erro muito comum, pode até funcionar em algumas situações, porque o Python não exige que esse primeiro parâmetro se chame self. Ele só precisa existir. Mas o problema é que nro_marcha vai receber o objeto, e não o número da marcha.
+    def trocar_marcha(self, nro_marcha): # nro_marcha: um erro muito comum, pode até funcionar em algumas situações, porque o Python não exige que esse primeiro parâmetro se chame self. Ele só precisa existir. Mas o problema é que nro_marcha vai receber o objeto, e não o número da marcha. Precisa colocar o self.
         print(nro_marcha)
-        print("Marcha trocada...")
+        print("Trocando Marcha...")
+
+        def _trocar_marcha():
+            if nro_marcha > self.marcha:
+                print("Marcha trocada...")
+            else:
+                print("Não foi possível trocar de marcha...")
 
     def get_cor(self): # não é uma prática muito comum, pois os atributos são acessíveis publicamente
         return self.cor
