@@ -11,7 +11,7 @@ class Cachorro:
     def __init__(self, nome, cor, acordado=True):
         self.nome = nome
         self.cor = cor
-        self.acrodado = acordado
+        self.acordado = acordado
 
 
 # class Cachorro: → cria a classe, ou seja, o molde do objeto.
@@ -48,3 +48,48 @@ del c
 # __del__ é chamado quando o objeto é destruído. del remove a referência ao objeto.
 
 # Só um detalhe importante: em Python, não é bom depender de __del__ para coisas críticas, porque o momento exato em que ele será executado pode variar.
+
+
+# Exemplo
+
+class Cachorro:
+    def __init__(self, nome, cor, acordado=True):
+        print("Inicializando a classe...") # o inicializador vai sempre ser excecuado primeiro
+        self.nome = nome
+        self.cor = cor
+        self.acordado = acordado
+
+    def __del__(self):
+        print("Removendo a instância da classe...")
+
+    def falar(self):
+        print("auau")
+
+
+def criar_cachorro():
+    c = Cachorro("Pluto", "marrom", false)
+
+
+c = Cachorro("Nero", "preto")
+c.falar()
+
+criar_cachorro()
+
+print("Olá mundo!")
+del c
+print("Olá mundo!")
+print("Olá mundo!")
+print("Olá mundo!")
+
+# O objeto pode ser destruído quando não houver mais referências a ele.
+# Podemos usar del para remover uma referência manualmente.
+
+# Cachorro
+# │
+# ├── Informações
+# │   ├── nome
+# │   ├── cor
+# │   └── acordado
+# │
+# └── Ações
+#     └── falar()
