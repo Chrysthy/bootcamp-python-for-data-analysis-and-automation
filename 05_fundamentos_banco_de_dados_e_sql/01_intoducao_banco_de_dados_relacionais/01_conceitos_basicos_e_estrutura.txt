@@ -1,0 +1,85 @@
+* TIPOS DE BANCO DE DADOS
+
+Relacional / SQL
+Organiza os dados em tabelas, com linhas e colunas. As tabelas podem se relacionar entre si.
+Ex.: MySQL, PostgreSQL, SQLite.
+Não Relacional / NoSQL (Not Only SQL)
+Não depende apenas de tabelas. Pode armazenar dados em documentos, chave-valor, grafos, entre outros formatos.
+Ex.: MongoDB e Redis.
+Orientado a Objetos
+Armazena os dados como objetos, de forma parecida com a programação orientada a objetos.
+Hierárquico
+Organiza os dados em uma estrutura de árvore, com relação de “pai e filho”.
+
+
+* SGBD
+
+SGBD significa Sistema Gerenciador de Banco de Dados.
+
+É o software usado para criar, organizar, consultar e modificar os dados de um banco.
+
+Exemplos: PostgreSQL, MySQL, SQLite, MariaDB, MongoDB e Redis.
+
+
+* CRUD
+
+São as quatro operações básicas realizadas com os dados:
+
+C - Create → criar/inserir dados
+R - Read → ler/consultar dados
+U - Update → atualizar dados
+D - Delete → excluir dados
+
+
+* BANCO DE DADOS RELACIONAL
+
+Os dados ficam organizados em tabelas formadas por:
+
+Colunas → características dos dados, como nome, idade e e-mail.
+Linhas → registros armazenados.
+Tabelas → agrupam informações relacionadas.
+
+As tabelas também podem se relacionar através de chaves.
+
+
+* PRINCIPAIS CARACTERÍSTICAS
+
+Relacionamento entre tabelas
+Uso da linguagem SQL
+Integridade referencial
+Normalização dos dados
+Segurança
+Flexibilidade e extensibilidade
+Suporte a transações ACID
+
+
+* ACID ajuda a garantir que as transações no banco sejam realizadas de forma segura e consistente.
+
+Suporte a Transações ACID
+
+Bancos de dados relacionais normalmente oferecem suporte às propriedades ACID, importantes para garantir segurança e consistência durante as transações.
+
+ACID significa:
+
+Atomicidade:
+Uma transação deve acontecer completamente ou não acontecer.
+
+Consistência:
+Os dados devem permanecer válidos antes e depois de uma transação.
+
+Isolamento:
+Transações executadas ao mesmo tempo não devem interferir incorretamente umas nas outras.
+
+Durabilidade:
+Depois que uma transação é confirmada, os dados devem permanecer armazenados mesmo se ocorrer uma falha no sistema.
+
+
+* RESUMO
+
+Bancos de dados podem ser relacionais, não relacionais, orientados a objetos ou hierárquicos.
+
+Nos bancos relacionais, os dados são armazenados em tabelas compostas por linhas e colunas.
+
+Os SGBDs são os sistemas responsáveis por administrar esses bancos de dados.
+
+Entre suas operações básicas estão Create, Read, Update e Delete, formando o CRUD.
