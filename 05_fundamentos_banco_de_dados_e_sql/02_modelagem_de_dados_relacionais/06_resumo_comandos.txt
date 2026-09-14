@@ -1,0 +1,39 @@
+Resumo rápido
+
+CREATE TABLE → cria uma tabela
+INSERT → adiciona registros
+SELECT → consulta registros
+UPDATE → altera registros
+DELETE → exclui registros
+ALTER TABLE → altera a estrutura da tabela
+DROP TABLE → exclui a tabela
+
+PRIMARY KEY → identifica um registro de forma única
+FOREIGN KEY → relaciona uma tabela com outra
+
+WHERE → define uma condição
+VALUES → informa os valores que serão inseridos
+SET → define o novo valor em um UPDATE
+ADD → adiciona algo à estrutura da tabela
+DROP COLUMN → remove uma coluna
+
+INT → número inteiro
+VARCHAR(255) → texto com até 255 caracteres
+DATE → data
+DECIMAL → número com casas decimais
+BOOLEAN → verdadeiro ou falso
+TEXT → texto longo
+
+NOT NULL → campo obrigatório
+UNIQUE → não permite valor repetido
+DEFAULT → define um valor padrão
+AUTO_INCREMENT → gera o próximo número automaticamente
+COMMENT → adiciona uma descrição à coluna
+
+* → todas as colunas
+
+nome = nome da coluna
+VARCHAR(255) = aceita texto
+NOT NULL = obrigatório
+UNIQUE = não pode repetir
+COMMENT = descrição daquela coluna
