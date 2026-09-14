@@ -1,0 +1,20 @@
+Índice é uma estrutura usada para tornar buscas no banco de dados mais rápidas.
+
+Funciona de forma parecida com o índice de um livro:
+em vez de procurar página por página, o banco consegue encontrar os dados mais rapidamente.
+
+Criar um índice:
+
+CREATE INDEX idx_nome
+ON usuarios(nome);
+
+Nesse caso, o índice é criado na coluna nome.
+
+
+Vantagem:
+consultas podem ficar mais rápidas.
+
+Desvantagem:
+índices ocupam espaço e podem deixar INSERT, UPDATE e DELETE um pouco mais lentos.
+
+Por isso, não é necessário criar índice em todas as colunas.
