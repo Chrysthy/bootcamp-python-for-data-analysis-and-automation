@@ -1,0 +1,83 @@
+Organização da SQL
+
+Os comandos SQL podem ser divididos em categorias de acordo com o que fazem no banco de dados.
+
+* DQL — Data Query Language
+Linguagem de Consulta de Dados.
+
+Usada para consultar e buscar informações no banco de dados.
+
+
+* DML — Data Manipulation Language
+
+Linguagem de Manipulação de Dados.
+
+Usada para inserir, alterar ou excluir dados existentes nas tabelas.
+
+Principais comandos:
+
+INSERT — adiciona dados
+UPDATE — altera dados
+DELETE — exclui dados
+
+
+* DDL — Data Definition Language
+
+Linguagem de Definição de Dados.
+
+Usada para criar ou modificar a estrutura do banco de dados.
+
+Principais comandos:
+
+CREATE — cria
+ALTER — altera a estrutura
+DROP — remove
+
+
+* DCL — Data Control Language
+
+Linguagem de Controle de Dados.
+
+Usada para controlar permissões e acessos ao banco de dados.
+
+Principais comandos:
+
+GRANT — concede permissões
+REVOKE — remove permissões
+
+
+* DTL / TCL — Data Transaction Language
+
+Linguagem de Transação de Dados.
+
+Usada para controlar transações no banco de dados.
+
+Principais comandos:
+
+BEGIN — inicia uma transação
+COMMIT — confirma as alterações
+ROLLBACK — desfaz as alterações
+
+
+**Nomenclatura em SQL**
+
+Ao criar nomes de tabelas, colunas e outros objetos do banco:
+
+Evite espaços nos nomes.
+Prefira começar o nome com uma letra.
+Podem ser usados letras, números e _ (underscore).
+Use nomes simples e descritivos.
+Mantenha um padrão de nomenclatura em todo o projeto.
+
+Exemplos:
+
+car_price
+customer_name
+order_date
+
+Evite:
+
+car price
+customer name
+
+A diferença entre letras maiúsculas e minúsculas pode depender do banco de dados utilizado. Por isso, é melhor manter um padrão consistente.
