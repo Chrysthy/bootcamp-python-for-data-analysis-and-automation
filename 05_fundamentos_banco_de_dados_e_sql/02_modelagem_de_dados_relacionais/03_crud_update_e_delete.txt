@@ -1,0 +1,38 @@
+UPDATE — atualizar dados
+
+O UPDATE altera informações que já existem.
+
+UPDATE destinos
+SET nome = 'Paris - França'
+WHERE id = 1;
+
+Significa:
+
+Encontre o registro com id = 1 e altere o nome.
+
+IMPORTANTE: normalmente usamos WHERE para indicar qual registro será alterado.
+
+Sem WHERE:
+
+UPDATE destinos
+SET nome = 'Paris';
+
+Todos os registros da tabela seriam alterados.
+
+
+
+
+**DELETE — excluir registros**
+
+O DELETE exclui registros da tabela.
+
+DELETE FROM destinos
+WHERE id = 1;
+
+Isso exclui somente o registro com id = 1.
+
+Sem WHERE:
+
+DELETE FROM destinos;
+
+Todos os registros seriam excluídos, mas a tabela continuaria existindo.
