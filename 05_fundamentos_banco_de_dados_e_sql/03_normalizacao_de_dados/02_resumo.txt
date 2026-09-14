@@ -1,0 +1,7 @@
+Resumo
+
+1FN → garante que cada valor seja atômico, ou seja, indivisível, e que os registros sejam únicos e identificáveis.
+
+2FN → garante que os atributos que não são chave dependam totalmente da chave primária, evitando dependências parciais.
+
+3FN → elimina dependências transitivas entre atributos que não são chave, garantindo que eles dependam apenas da chave primária.
