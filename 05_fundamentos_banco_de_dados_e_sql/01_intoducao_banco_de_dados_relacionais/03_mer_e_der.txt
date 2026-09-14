@@ -1,0 +1,72 @@
+MER e DER
+
+MER (Modelo Entidade-Relacionamento)
+É o modelo usado para representar como os dados de um sistema se organizam e se relacionam.
+
+DER (Diagrama Entidade-Relacionamento)
+É a representação visual do MER.
+
+Entidades
+Representam objetos ou elementos do sistema sobre os quais queremos armazenar informações.
+
+Exemplos:
+Usuario
+Reserva
+Destino
+
+Atributos
+São as características ou informações de uma entidade.
+
+Exemplo:
+Usuario
+- id
+- nome
+- dataNascimento
+- endereco
+
+Relacionamentos
+Representam a associação entre duas ou mais entidades.
+
+Exemplo:
+Usuario realiza Reserva
+Reserva vincula Destino
+
+Cardinalidade
+Define quantas ocorrências de uma entidade podem se relacionar com outra.
+
+1:1 → um para um
+1:N → um para muitos
+N:N → muitos para muitos
+
+No exemplo:
+
+Usuario 1:N Reserva
+- Um usuário pode ter nenhuma ou várias reservas.
+- Cada reserva pertence a um único usuário.
+
+Destino 1:N Reserva
+- Um destino pode aparecer em nenhuma ou várias reservas.
+- Cada reserva possui um único destino.
+
+
+Exemplo no QuickDBD:
+
+Usuario
+-
+id int PK
+nome varchar(100)
+dataNascimento date
+endereco varchar(200)
+
+Reserva
+-
+id int PK
+idUsuario int FK >- Usuario.id
+idDestino int FK >- Destino.id
+status varchar(50)
+
+Destino
+-
+id int PK
+nome varchar(100)
+descricao varchar(255)
