@@ -1,0 +1,42 @@
+CRUD representa as quatro operações básicas realizadas com dados:
+
+Create → criar/adicionar
+
+Read → consultar
+
+Update → atualizar
+
+Delete → excluir
+
+
+
+
+**INSERT — adicionar dados**
+
+O INSERT adiciona um novo registro.
+
+INSERT INTO destinos (id, nome, descricao)
+VALUES (1, 'Paris', 'Destino na França');
+
+
+
+
+**SELECT — consultar dados**
+
+O SELECT busca informações.
+
+Todos os dados:
+
+SELECT *
+FROM destinos;
+
+Apenas algumas colunas:
+
+SELECT nome, descricao
+FROM destinos;
+
+Com condição:
+
+SELECT *
+FROM destinos
+WHERE id = 1;
