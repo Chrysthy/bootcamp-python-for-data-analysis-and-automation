@@ -1,0 +1,44 @@
+**Chave Primária — PRIMARY KEY**
+
+A PRIMARY KEY identifica cada registro de forma única.
+
+Exemplo:
+
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100)
+);
+
+O id será único para cada usuário.
+
+AUTO_INCREMENT faz o banco gerar o próximo número automaticamente.
+
+
+
+
+**Chave Estrangeira — FOREIGN KEY**
+
+A FOREIGN KEY cria uma relação entre tabelas.
+
+Exemplo:
+
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100)
+);
+
+CREATE TABLE reservas (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_usuario INT,
+    
+    FOREIGN KEY (id_usuario)
+    REFERENCES usuarios(id)
+);
+
+Aqui:
+
+usuarios.id → chave primária
+
+reservas.id_usuario → chave estrangeira
+
+Isso permite saber qual usuário fez determinada reserva.
