@@ -1,0 +1,28 @@
+**ALTER TABLE — alterar uma tabela**
+
+O ALTER TABLE modifica a estrutura de uma tabela que já existe.
+
+Adicionar uma coluna:
+
+ALTER TABLE destinos
+ADD pais VARCHAR(100);
+
+Modificar uma coluna:
+
+ALTER TABLE destinos
+MODIFY nome VARCHAR(150);
+
+Excluir uma coluna:
+
+ALTER TABLE destinos
+DROP COLUMN descricao;
+
+
+
+**DROP TABLE — excluir uma tabela**
+
+O DROP TABLE exclui a tabela inteira.
+
+DROP TABLE destinos;
+
+Diferente do DELETE, aqui a estrutura da tabela também deixa de existir.
