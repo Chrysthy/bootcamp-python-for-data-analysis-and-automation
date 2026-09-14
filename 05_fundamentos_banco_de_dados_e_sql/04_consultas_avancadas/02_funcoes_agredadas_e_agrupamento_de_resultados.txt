@@ -1,0 +1,66 @@
+Funções agregadas e agrupamento de resultados
+
+Funções agregadas realizam cálculos sobre vários registros.
+
+COUNT()
+Conta registros.
+
+SELECT COUNT(*)
+FROM usuarios;
+
+
+SUM()
+Soma valores.
+
+SELECT SUM(valor)
+FROM reservas;
+
+
+AVG()
+Calcula a média.
+
+SELECT AVG(valor)
+FROM reservas;
+
+
+MAX()
+Retorna o maior valor.
+
+SELECT MAX(valor)
+FROM reservas;
+
+
+MIN()
+Retorna o menor valor.
+
+SELECT MIN(valor)
+FROM reservas;
+
+
+GROUP BY
+
+Agrupa registros que possuem o mesmo valor.
+
+Exemplo:
+
+SELECT status, COUNT(*)
+FROM reservas
+GROUP BY status;
+
+Pode retornar:
+
+confirmada | 5
+pendente   | 3
+cancelada  | 2
+
+
+HAVING
+
+Filtra os resultados depois do GROUP BY.
+
+Exemplo:
+
+SELECT status, COUNT(*)
+FROM reservas
+GROUP BY status
+HAVING COUNT(*) > 2;
