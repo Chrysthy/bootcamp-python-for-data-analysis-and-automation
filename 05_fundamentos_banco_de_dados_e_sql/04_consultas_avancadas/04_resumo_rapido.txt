@@ -1,0 +1,31 @@
+RESUMO RÁPIDO
+
+JOIN → junta dados de tabelas
+
+INNER JOIN → somente registros correspondentes
+
+LEFT JOIN → todos da tabela da esquerda + correspondências
+
+RIGHT JOIN → todos da tabela da direita + correspondências
+
+ON → define a relação entre as tabelas
+
+SUBQUERY → consulta dentro de outra consulta
+
+COUNT() → conta
+
+SUM() → soma
+
+AVG() → média
+
+MAX() → maior valor
+
+MIN() → menor valor
+
+GROUP BY → agrupa registros
+
+HAVING → filtra grupos
+
+INDEX → ajuda a acelerar consultas
+
+CREATE INDEX → cria um índice
