@@ -1,0 +1,97 @@
+**Tabelas**
+
+Ela é usada para armazenar dados de forma organizada.
+Cada tabela em um banco de dados relacional tem um nome único e é dividida em colunas e linhas.
+
+
+**Colunas**
+
+Uma coluna é uma estrutura dentro de uma tabela que representa um atributo específico dos dados armazenados.
+Cada coluna tem um nome único e um tipo de dado associado, que define o tipo de informação que pode ser armazenado nela, como números, textos, datas etc.
+
+
+**Registros**
+
+Um registro, também conhecido como linha ou tupla, é uma instância individual de dados em uma tabela.
+
+
+
+**Comando: CREATE TABLE**
+
+Usado para criar uma nova tabela no banco de dados.
+
+
+Estrutura básica:
+
+CREATE TABLE nome (
+    coluna tipo opcoes COMMENT 'comentario'
+);
+
+
+
+**Tipos de Dados**
+
+Os tipos de dados podem variar entre diferentes SGBDs. Os mais comuns são:
+
+* **Inteiro (`INTEGER`)** — números inteiros.
+* **Decimal/Numérico (`DECIMAL` / `NUMERIC`)** — números com casas decimais.
+* **Caractere (`CHAR` / `VARCHAR`)** — textos curtos.
+* **Data/Hora (`DATE` / `TIME`)** — datas e horários.
+* **Booleano (`BOOLEAN`)** — valores verdadeiro ou falso.
+* **Texto longo (`TEXT`)** — textos maiores.
+
+
+**Comando: CREATE TABLE — Opções**
+
+As colunas podem receber algumas regras e restrições:
+
+NOT NULL — o campo não pode ficar vazio.
+UNIQUE — não permite valores repetidos.
+DEFAULT — define um valor padrão.
+Chave primária (PRIMARY KEY) — identifica cada registro de forma única.
+Chave estrangeira (FOREIGN KEY) — cria relação com outra tabela.
+Auto incremento (AUTO_INCREMENT) — gera valores automaticamente, normalmente para o id.
+
+
+
+
+## 1. Tabelas, Colunas e Registros
+
+Uma **tabela** armazena os dados de forma organizada.
+
+As **colunas** representam as características dos dados.
+
+Os **registros** são as linhas da tabela, ou seja, cada conjunto de informações armazenado.
+
+Exemplo:
+
+| id | nome | descricao |
+|---|---|---|
+| 1 | Paris | França |
+| 2 | Roma | Itália |
+
+Nesse exemplo:
+
+- `destinos` → tabela
+- `id`, `nome`, `descricao` → colunas
+- cada linha → registro
+
+
+## 2. CREATE TABLE
+
+O `CREATE TABLE` é usado para criar uma tabela.
+
+```sql
+CREATE TABLE destinos (
+    id INT,
+    nome VARCHAR(255) NOT NULL,
+    descricao VARCHAR(255)
+);
+
+Nesse exemplo:
+
+id INT → número inteiro
+
+nome VARCHAR(255) → texto de até 255 caracteres
+
+NOT NULL → o campo é obrigatório
