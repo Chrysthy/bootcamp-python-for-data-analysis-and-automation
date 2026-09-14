@@ -1,0 +1,142 @@
+**Normalização de dados**
+
+A normalização de dados é um processo no qual se organiza e estrutura um banco de dados relacional de forma a eliminar redundâncias e anomalias, garantindo a consistência e integridade dos dados.
+
+
+
+Problema
+
+id | nome  | endereço
+
+1  | João  | Rua A, 123, Cidade X, Estado Y
+2  | Maria | Rua B, 456, Cidade Y, Estado Z
+3  | Pedro | Avenida C, 789, Cidade X, Estado Y
+
+Pergunta:
+Como buscar todos os usuários da Cidade X?
+
+O problema é que o campo endereço guarda várias informações juntas:
+
+rua
+número
+cidade
+estado
+
+Isso dificulta consultas específicas, como buscar somente usuários da Cidade X.
+
+Na 1FN, o ideal seria separar:
+
+id | nome  | rua       | numero | cidade   | estado
+
+1  | João  | Rua A     | 123    | Cidade X | Estado Y
+2  | Maria | Rua B     | 456    | Cidade Y | Estado Z
+3  | Pedro | Avenida C | 789    | Cidade X | Estado Y
+
+Aí fica muito mais fácil consultar:
+
+WHERE cidade = 'Cidade X'
+
+
+
+
+NORMALIZAÇÃO DE DADOS
+
+Normalização é a organização dos dados em tabelas para:
+
+- evitar informações repetidas
+- reduzir redundância
+- evitar inconsistências
+- facilitar atualização e manutenção dos dados
+
+A ideia é dividir os dados de forma lógica e relacionar as tabelas usando chaves.
+
+
+1FN — Primeira Forma Normal
+
+Cada campo deve armazenar apenas um valor.
+
+Errado:
+
+cliente | telefones
+Ana     | 9999, 8888
+
+Certo:
+
+cliente | telefone
+Ana     | 9999
+Ana     | 8888
+
+Não devemos guardar vários valores diferentes dentro da mesma coluna.
+
+
+2FN — Segunda Forma Normal
+
+Precisa estar na 1FN.
+
+Os dados devem depender da chave da tabela.
+
+Informações que pertencem a outro assunto devem ser separadas em outra tabela.
+
+Exemplo:
+
+PEDIDOS
+id_pedido
+id_cliente
+nome_cliente
+
+O nome do cliente depende do cliente, não do pedido.
+
+Melhor:
+
+CLIENTES
+id_cliente
+nome
+
+PEDIDOS
+id_pedido
+id_cliente
+
+
+3FN — Terceira Forma Normal
+
+Precisa estar na 2FN.
+
+Uma coluna não deve depender de outra coluna que não seja a chave primária.
+
+Exemplo:
+
+FUNCIONARIOS
+id
+nome
+id_cargo
+nome_cargo
+
+O nome do cargo depende de id_cargo.
+
+Melhor separar:
+
+FUNCIONARIOS
+id
+nome
+id_cargo
+
+CARGOS
+id_cargo
+nome_cargo
+
+
+RESUMO RÁPIDO
+
+Normalização → organiza os dados e evita repetição
+
+1FN → um valor por campo
+
+2FN → dados devem depender da chave
+
+3FN → campos devem depender diretamente da chave primária
+
+Redundância → informação repetida
+
+PRIMARY KEY → identifica cada registro
+
+FOREIGN KEY → relaciona tabelas
