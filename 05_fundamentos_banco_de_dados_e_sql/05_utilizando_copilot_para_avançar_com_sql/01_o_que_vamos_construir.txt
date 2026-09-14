@@ -1,0 +1,44 @@
+# 🃏 Pokémon Card Collection Database
+
+Este projeto simula um **banco de dados para gerenciamento de uma coleção de cartas Pokémon**.
+
+A ideia é praticar SQL utilizando informações que existem em uma carta Pokémon, como nome, HP, tipo, estágio, ataque, dano, fraqueza e resistência.
+
+Além das características da carta, o banco também permitirá controlar informações da coleção, como quantidade de cartas disponíveis.
+
+---
+
+## 🎯 O que vamos construir
+
+Vamos criar um banco de dados capaz de armazenar e consultar cartas Pokémon.
+
+Cada carta poderá conter informações como:
+
+- Nome
+- HP
+- Tipo
+- Estágio
+- Descrição
+- Nome do ataque
+- Dano do ataque
+- Fraqueza
+- Resistência
+- Custo de recuo
+- Quantidade na coleção
+
+Exemplo de uma carta cadastrada:
+
+| Campo | Valor |
+|---|---|
+| Name | Charizard |
+| HP | 120 |
+| Type | Fire |
+| Stage | Stage 2 |
+| Attack | Fire Spin |
+| Damage | 100 |
+| Weakness | Water |
+| Resistance | Fighting |
+| Retreat Cost | 3 |
+| Quantity | 1 |
+
+---
