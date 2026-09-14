@@ -1,0 +1,37 @@
+# Configuração do Ambiente
+
+## MariaDB
+
+MariaDB é um Sistema Gerenciador de Banco de Dados Relacional (SGBD) compatível com SQL.
+
+Ele será utilizado para criar bancos de dados, tabelas e executar comandos SQL.
+
+## CloudClusters
+
+O CloudClusters é uma plataforma de hospedagem em nuvem. Neste estudo, ele é utilizado para disponibilizar uma instância do MariaDB sem precisar instalar o banco de dados localmente.
+
+## Passo a passo
+
+1. Acessar o CloudClusters e criar uma conta.
+2. Criar uma aplicação MariaDB.
+3. Após a aplicação ser criada, acessar `Manage`.
+4. Entrar em `DB & User`.
+5. Criar um banco de dados em `Create Database`.
+6. Criar um usuário em `Create User`.
+7. Dar ao usuário acesso ao banco criado.
+8. Acessar a opção `phpMyAdmin`.
+9. Clicar em `Launch`.
+10. Fazer login com o usuário e senha do banco.
+11. Selecionar o banco de dados no menu lateral.
+12. Acessar a aba `SQL` para escrever e executar comandos SQL.
+
+
+* Resumo
+
+CloudClusters → hospeda o banco na nuvem
+
+MariaDB → gerencia o banco de dados
+
+phpMyAdmin → interface visual para administrar o MariaDB
+
+SQL → linguagem utilizada para consultar e manipular os dados
