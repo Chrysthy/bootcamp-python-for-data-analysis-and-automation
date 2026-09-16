@@ -38,3 +38,16 @@ Nesta aula foram trabalhados principalmente os formatos **TXT, CSV e JSON**.
 
 ---
 
+# Criando um arquivo para teste
+
+with open("dados.txt", "w") as arquivo:
+    arquivo.write("Python é uma linguagem poderosa.\n")
+    arquivo.write("Estamos aprendendo arquivos.")
+
+
+# Lendo o arquivo completo
+
+with open("dados.txt", "r") as arquivo:
+    conteudo = arquivo.read()
+
+print(conteudo)
