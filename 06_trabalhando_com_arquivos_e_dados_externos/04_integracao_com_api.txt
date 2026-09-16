@@ -59,3 +59,43 @@ Os dados obtidos de uma API podem, por exemplo, ser armazenados em um arquivo JS
 
 ---
 
+import requests
+
+url = "https://api.agify.io/?name=chrystine"
+
+resposta = requests.get(url)
+
+print(resposta.status_code)
+print(resposta.text)
+
+
+
+import requests
+
+url = "https://api.agify.io/?name=gercinei"
+
+resposta = requests.get(url)
+
+dados = resposta.json()
+
+print(dados)
+
+
+
+print("Nome:", dados["name"])
+print("Idade estimada:", dados["age"])
+print("Número de registros:", dados["count"])
+
+
+
+import json
+import requests
+
+url = "https://api.agify.io/?name=ana"
+
+resposta = requests.get(url)
+
+dados = resposta.json()
+
+with open("dados_api.json", "w") as arquivo:
+    json.dump(dados, arquivo)
