@@ -53,3 +53,32 @@ Ele permite adicionar novos conteúdos ao final de um arquivo sem apagar o conte
 
 ---
 
+
+# Lendo linha por linha
+
+with open("dados.txt", "r") as arquivo:
+    for linha in arquivo:
+        print(linha.strip())
+
+
+
+# Escrevendo em um arquivo
+
+with open("relatorio.txt", "w") as arquivo:
+    arquivo.write("Relatório de vendas\n")
+    arquivo.write("Total: 1500")
+
+
+
+# Adicionando conteúdo ao arquivo
+
+with open("relatorio.txt", "a") as arquivo:
+    arquivo.write("\nNovo registro adicionado.")
+
+
+
+# Lendo linha por linha
+
+with open("relatorio.txt", "r") as arquivo:
+    for linha in arquivo:
+        print(linha.strip())
