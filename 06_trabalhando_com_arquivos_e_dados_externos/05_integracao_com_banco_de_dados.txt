@@ -1,0 +1,201 @@
+# Integração com banco de dados
+
+Além de arquivos, também podemos armazenar informações em **bancos de dados**.
+
+Um banco de dados permite:
+
+* Armazenar grandes quantidades de informações
+* Organizar dados em tabelas
+* Consultar informações rapidamente
+* Inserir novos registros
+* Atualizar informações
+* Excluir registros
+
+Em Python podemos trabalhar com diferentes bancos de dados.
+
+Nesta aula foi utilizado o **SQLite**, que já possui suporte integrado no Python.
+
+---
+
+## SQLite
+
+O SQLite é um banco de dados leve que pode ser armazenado diretamente em um arquivo.
+
+Python possui o módulo `sqlite3`, que permite trabalhar com esse banco.
+
+Com ele podemos:
+
+* Criar um banco de dados
+* Criar tabelas
+* Inserir informações
+* Consultar dados
+* Atualizar registros
+* Excluir informações
+
+---
+
+## Conexão com o banco
+
+Para trabalhar com SQLite, primeiro precisamos estabelecer uma conexão com o banco de dados.
+
+Depois da conexão, podemos criar um **cursor**.
+
+O cursor é utilizado para executar comandos SQL no banco de dados.
+
+---
+
+## `commit()`
+
+Quando realizamos alterações no banco de dados, como inserir ou modificar informações, utilizamos `commit()` para confirmar e salvar essas alterações.
+
+---
+
+## `fetchall()`
+
+Depois de realizar uma consulta no banco de dados, podemos utilizar `fetchall()` para recuperar todos os registros encontrados pela consulta.
+
+---
+
+# Boas práticas de segurança e integridade
+
+Quando trabalhamos com dados externos, podem ocorrer diferentes tipos de problemas.
+
+Por exemplo:
+
+* Arquivos inexistentes
+* Dados inválidos
+* Arquivos corrompidos
+* Erros de leitura
+* Problemas durante o processamento
+
+Por isso, é importante aplicar boas práticas para tornar o programa mais **seguro e confiável**.
+
+Algumas práticas importantes são:
+
+* Verificar se o arquivo existe
+* Tratar possíveis erros
+* Validar os dados antes de utilizá-los
+
+---
+
+## Verificando se um arquivo existe
+
+Antes de tentar abrir um arquivo, podemos verificar se ele realmente existe.
+
+O módulo `os` do Python possui recursos que permitem realizar essa verificação.
+
+Isso evita que o programa tente acessar um arquivo inexistente.
+
+---
+
+## Tratamento de erros
+
+Também podemos utilizar estruturas de tratamento de erros para evitar que o programa seja interrompido inesperadamente.
+
+Uma das estruturas utilizadas em Python é:
+
+* `try`
+* `except`
+
+O bloco `try` contém o código que será executado.
+
+Caso algum erro aconteça, o bloco `except` pode tratar esse problema.
+
+---
+
+## Validação de dados
+
+Além de verificar se um arquivo existe, também é importante verificar se os dados encontrados dentro dele são válidos.
+
+Por exemplo, podemos verificar se determinado valor contém apenas números antes de tentar utilizá-lo em um cálculo.
+
+Essa validação ajuda a evitar erros durante a execução do programa.
+
+---
+
+# Automatizando importação e exportação de dados
+
+Em muitos sistemas, os dados precisam ser processados automaticamente.
+
+Por exemplo:
+
+1. Ler um arquivo de vendas
+2. Processar os dados
+3. Calcular resultados
+4. Gerar um relatório
+5. Salvar os resultados
+
+Esse processo automático pode ser chamado de **automação de dados**.
+
+Muitas empresas utilizam esse tipo de automação para:
+
+* Análise de dados
+* Relatórios automáticos
+* Integração entre sistemas
+* Processamento de grandes volumes de informações
+
+---
+
+# Pipeline de dados
+
+Um fluxo simples de processamento de dados pode seguir algumas etapas:
+
+### 1. Importação
+
+Os dados são carregados de alguma fonte externa.
+
+Por exemplo:
+
+* CSV
+* JSON
+* API
+* Banco de dados
+
+### 2. Processamento
+
+O programa percorre e manipula os dados.
+
+Podemos realizar operações como:
+
+* Cálculos
+* Filtros
+* Conversões
+* Validações
+
+### 3. Geração do resultado
+
+Depois do processamento, os resultados podem ser organizados em uma nova estrutura.
+
+### 4. Exportação
+
+Por último, o resultado pode ser salvo em outro arquivo ou banco de dados.
+
+Esse tipo de fluxo permite transformar dados brutos em informações que podem ser utilizadas em relatórios, análises ou outros sistemas.
+
+---
+
+## 📚 Conceitos estudados
+
+Nesta aula foram trabalhados conceitos de:
+
+* Arquivos externos
+* `open()`
+* Leitura de arquivos
+* Escrita de arquivos
+* `read()`
+* `write()`
+* TXT
+* CSV
+* JSON
+* APIs
+* Requisições HTTP
+* Método `GET`
+* Biblioteca `requests`
+* SQLite
+* `sqlite3`
+* Banco de dados
+* Tratamento de erros
+* Validação de dados
+* Automação de dados
+* Importação e exportação de dados
+* Pipeline de processamento
