@@ -1,0 +1,61 @@
+# Integração com bancos de dados e APIs
+
+## O que é uma API?
+
+API significa **Application Programming Interface**.
+
+Uma API permite que **um sistema forneça dados para outro sistema**.
+
+Em vez de acessar diretamente um banco de dados ou arquivo, uma aplicação pode solicitar informações para outro serviço por meio da internet.
+
+Alguns exemplos de informações que podem ser obtidas através de APIs:
+
+* Previsão do tempo
+* Dados de criptomoedas
+* Dados de usuários
+* Mapas
+* Localização
+
+Muitas APIs retornam seus dados no formato **JSON**.
+
+---
+
+## Requisições HTTP
+
+Para acessar uma API, precisamos realizar uma **requisição HTTP**.
+
+Um dos métodos mais comuns é:
+
+### `GET`
+
+O método `GET` é utilizado para **buscar dados**.
+
+Em Python, podemos utilizar a biblioteca `requests` para realizar requisições HTTP.
+
+---
+
+# Leitura de dados externos através de APIs
+
+Como muitas APIs retornam informações em JSON, podemos converter a resposta recebida para estruturas de dados do Python.
+
+Por exemplo, uma resposta JSON pode ser transformada em um **dicionário Python**.
+
+Depois disso, conseguimos acessar individualmente as informações retornadas pela API.
+
+---
+
+# Salvando dados de uma API
+
+Depois de coletar dados de uma API, também podemos armazená-los em arquivos.
+
+Isso permite criar:
+
+* Relatórios
+* Bases de dados locais
+* Histórico de informações
+* Arquivos para análise posterior
+
+Os dados obtidos de uma API podem, por exemplo, ser armazenados em um arquivo JSON.
+
+---
+
