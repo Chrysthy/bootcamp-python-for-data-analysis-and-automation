@@ -67,3 +67,29 @@ with open("pessoas.csv", "r") as arquivo:
 
     for linha in leitor:
         print(linha)
+
+
+
+
+import json
+
+dados = {
+    "nome": "Ana",
+    "idade": 25,
+    "cidade": "São Paulo"
+}
+
+with open("usuario.json", "w") as arquivo:
+    json.dump(dados, arquivo)
+
+
+
+
+# lendo JSON
+
+import json
+
+with open("usuario.json", "r") as arquivo:
+    dados = json.load(arquivo)
+
+print(dados)
