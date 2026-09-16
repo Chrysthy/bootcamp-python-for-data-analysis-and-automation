@@ -1,0 +1,42 @@
+# CSV
+
+## Módulo `csv`
+
+Arquivos CSV são utilizados para representar **tabelas de dados**.
+
+Eles são muito comuns em:
+
+* Planilhas
+* Análise de dados
+* Exportação de sistemas
+
+Python possui o módulo `csv`, que facilita a leitura e escrita desse tipo de arquivo.
+
+Com ele podemos:
+
+* Criar arquivos CSV
+* Adicionar dados
+* Ler informações
+* Percorrer linhas e colunas
+
+---
+
+# JSON
+
+## Módulo `json`
+
+JSON é um formato utilizado para armazenar e transmitir **dados estruturados**.
+
+Ele é muito comum em:
+
+* APIs
+* Aplicações web
+* Armazenamento de dados
+* Comunicação entre sistemas
+
+Python possui o módulo `json` para trabalhar com esse formato.
+
+Com ele podemos transformar estruturas de dados Python em JSON e também converter JSON novamente para estruturas que o Python consegue manipular.
+
+---
+
