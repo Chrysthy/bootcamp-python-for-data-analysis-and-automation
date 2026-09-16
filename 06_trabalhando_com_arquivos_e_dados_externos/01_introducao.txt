@@ -1,0 +1,40 @@
+# 📂 Trabalhando com Arquivos e Dados Externos em Python
+
+## Introdução a arquivos e dados externos
+
+### O que são dados externos?
+
+Em muitos programas, os dados **não ficam dentro do código**.
+
+Eles podem ficar armazenados em fontes externas, como:
+
+* Arquivos de texto
+* Planilhas
+* Bancos de dados
+* APIs na internet
+
+Python permite:
+
+* Ler esses dados
+* Processar informações
+* Salvar novos resultados
+
+Isso é essencial para trabalhar com **dados reais**.
+
+---
+
+## Tipos de arquivos mais comuns
+
+Alguns formatos são muito utilizados em programação:
+
+| Tipo           | Uso                                        |
+| -------------- | ------------------------------------------ |
+| TXT            | Texto simples                              |
+| CSV            | Tabelas e planilhas                        |
+| JSON           | Estrutura de dados muito utilizada em APIs |
+| Banco de dados | Armazenamento estruturado de informações   |
+
+Nesta aula foram trabalhados principalmente os formatos **TXT, CSV e JSON**.
+
+---
+
