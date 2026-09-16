@@ -40,3 +40,30 @@ Com ele podemos transformar estruturas de dados Python em JSON e também convert
 
 ---
 
+import csv
+
+# criando um arquivo CSV
+
+dados = [
+    ["nome", "idade", "cidade"],
+    ["Ana", 25, "São Paulo"],
+    ["Carlos", 30, "Rio de Janeiro"],
+    ["Maria", 28, "Belo Horizonte"]
+]
+
+with open("pessoas.csv", "w", newline="") as arquivo:
+    writer = csv.writer(arquivo)
+    writer.writerows(dados)
+
+
+
+
+# lendo um CSV
+
+import csv
+
+with open("pessoas.csv", "r") as arquivo:
+    leitor = csv.reader(arquivo)
+
+    for linha in leitor:
+        print(linha)
