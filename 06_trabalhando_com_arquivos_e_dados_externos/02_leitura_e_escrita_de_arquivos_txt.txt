@@ -1,0 +1,55 @@
+## Função `open()`
+
+Para trabalhar com arquivos em Python, podemos utilizar a função `open()`.
+
+Ela permite abrir arquivos para realizar diferentes operações.
+
+Os modos mais comuns são:
+
+| Modo | Significado        |
+| ---- | ------------------ |
+| `r`  | Leitura            |
+| `w`  | Escrita            |
+| `a`  | Adicionar conteúdo |
+
+### Modo `r`
+
+O modo `r` significa **read**.
+
+É utilizado quando queremos ler o conteúdo de um arquivo sem modificá-lo.
+
+---
+
+### Função `read()`
+
+A função `read()` é utilizada para ler todo o conteúdo de um arquivo.
+
+O conteúdo é retornado como texto e pode ser armazenado em uma variável para ser utilizado posteriormente.
+
+Também é possível percorrer um arquivo **linha por linha**.
+
+---
+
+### Modo `w`
+
+O modo `w` significa **write**.
+
+É utilizado para gravar informações em um arquivo.
+
+Esse modo:
+
+* Cria o arquivo caso ele ainda não exista
+* Sobrescreve o conteúdo caso o arquivo já exista
+
+Isso significa que o conteúdo anterior será apagado quando utilizamos esse modo em um arquivo existente.
+
+---
+
+### Modo `a`
+
+O modo `a` significa **append**.
+
+Ele permite adicionar novos conteúdos ao final de um arquivo sem apagar o conteúdo que já existe.
+
+---
+
