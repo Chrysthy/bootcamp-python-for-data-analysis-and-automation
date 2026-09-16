@@ -1,0 +1,25 @@
+## 📚 Conceitos estudados
+
+Nesta aula foram trabalhados conceitos de:
+
+* Arquivos externos
+* `open()`
+* Leitura de arquivos
+* Escrita de arquivos
+* `read()`
+* `write()`
+* TXT
+* CSV
+* JSON
+* APIs
+* Requisições HTTP
+* Método `GET`
+* Biblioteca `requests`
+* SQLite
+* `sqlite3`
+* Banco de dados
+* Tratamento de erros
+* Validação de dados
+* Automação de dados
+* Importação e exportação de dados
+* Pipeline de processamento
