@@ -1,0 +1,89 @@
+# `raise`
+
+A palavra-chave `raise` permite **gerar uma exceção manualmente**.
+
+Isso pode ser utilizado quando queremos impedir que determinado valor ou situação continue sendo processado.
+
+Por exemplo, podemos gerar um erro quando:
+
+- Uma idade for negativa
+- Um valor estiver fora do intervalo permitido
+- Uma informação obrigatória estiver ausente
+- Uma regra definida pelo programa não for respeitada
+
+Com `raise`, podemos controlar situações que consideramos inválidas dentro da lógica da aplicação.
+
+---
+
+
+# Depuração — Debugging
+
+**Debugging** significa encontrar, analisar e corrigir erros no código.
+
+Durante o desenvolvimento de um programa, é comum ocorrerem comportamentos inesperados.
+
+A depuração ajuda a entender:
+
+- Onde o problema aconteceu
+- Quais valores estavam sendo utilizados
+- Qual parte do código causou o erro
+- Como corrigir o comportamento
+
+---
+
+## Print Debugging
+
+Uma das formas mais simples de depurar um programa é utilizar `print()`.
+
+Com ele podemos visualizar valores durante a execução do código.
+
+Isso ajuda a verificar:
+
+- O valor de uma variável
+- O resultado de uma operação
+- Se determinada parte do código foi executada
+- Qual valor está causando um problema
+
+É uma técnica simples, mas muito útil durante o aprendizado e desenvolvimento de pequenos programas.
+
+---
+
+# Stack Trace
+
+Quando ocorre um erro, o Python geralmente apresenta um **stack trace**.
+
+O stack trace mostra informações importantes sobre o problema.
+
+Ele pode indicar:
+
+- Qual tipo de erro ocorreu
+- Qual linha causou o problema
+- Em qual função o erro aconteceu
+- O caminho percorrido pelo programa até chegar ao erro
+
+Aprender a ler o stack trace ajuda bastante na identificação e correção de problemas.
+
+
+
+idade = -5
+
+if idade < 0:
+    raise ValueError("Idade não pode ser negativa")
+
+
+
+numero = 10
+divisor = 0
+
+print("numero:", numero)
+print("divisor:", divisor)
+
+resultado = numero / divisor
+
+
+
+def dividir(a, b):
+    return a / b
+
+
+dividir(10, 0)
