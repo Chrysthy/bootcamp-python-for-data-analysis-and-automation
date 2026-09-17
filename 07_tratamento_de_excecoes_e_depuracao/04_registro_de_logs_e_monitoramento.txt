@@ -1,0 +1,84 @@
+# Logs e monitoramento
+
+Em sistemas reais, nem sempre podemos acompanhar a execução do programa diretamente.
+
+Por isso, podemos utilizar **logs**.
+
+Logs são registros de eventos que acontecem durante a execução de um sistema.
+
+Eles ajudam a acompanhar o comportamento da aplicação e identificar possíveis problemas.
+
+---
+
+# Módulo `logging`
+
+Python possui um módulo chamado `logging`.
+
+Ele permite registrar informações importantes sobre a execução do programa.
+
+Os logs podem ser utilizados para:
+
+- Registrar eventos
+- Identificar erros
+- Acompanhar etapas de execução
+- Monitorar sistemas
+- Analisar problemas depois que aconteceram
+
+---
+
+## Níveis de log
+
+Existem diferentes níveis de log.
+
+Cada um representa um nível diferente de importância.
+
+| Nível | Uso |
+| --- | --- |
+| `DEBUG` | Informações detalhadas utilizadas durante a depuração |
+| `INFO` | Informações gerais sobre a execução |
+| `WARNING` | Avisos sobre possíveis problemas |
+| `ERROR` | Indica que ocorreu um erro |
+| `CRITICAL` | Indica um erro grave |
+
+Esses níveis ajudam a organizar as mensagens registradas pelo sistema.
+
+---
+
+# Monitoramento de scripts
+
+Logs são especialmente úteis em scripts que são executados automaticamente.
+
+Eles ajudam a:
+
+- Identificar erros
+- Entender o funcionamento do sistema
+- Monitorar scripts automatizados
+- Saber quando uma etapa foi executada
+- Investigar problemas posteriormente
+
+Em uma automação, por exemplo, os logs podem registrar quando o processo começou, quando terminou e se ocorreu algum erro.
+
+
+
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+logging.info("Programa iniciado")
+
+
+
+
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+logging.debug("Mensagem de debug")
+logging.info("Informação geral")
+logging.warning("Aviso")
+logging.error("Erro ocorrido")
+
+
+
+
