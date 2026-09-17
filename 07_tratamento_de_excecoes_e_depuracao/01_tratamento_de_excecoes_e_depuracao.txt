@@ -1,0 +1,46 @@
+# 📂 Tratamento de Exceções em Python
+
+## O que são erros?
+
+Durante a execução de um programa podem ocorrer **erros inesperados**.
+
+Esses erros são chamados de **exceções**.
+
+Uma exceção acontece quando o Python encontra uma situação que não consegue executar normalmente.
+
+Alguns exemplos são:
+
+- Dividir um número por zero
+- Acessar um arquivo que não existe
+- Converter um texto para número de forma incorreta
+- Utilizar um tipo de dado inadequado em uma operação
+
+Quando uma exceção não é tratada, o programa pode interromper sua execução.
+
+
+
+## Tipos de erros em Python
+
+Alguns erros comuns são:
+
+| Tipo de erro | Descrição |
+|---|---|
+| SyntaxError | erro de sintaxe |
+| TypeError | operação com tipo incorreto |
+| ValueError | valor inválido |
+| ZeroDivisionError | divisão por zero |
+| FileNotFoundError | arquivo não encontrado |
+
+
+
+
+# exemplo de erro
+
+numero = 10 / 0
+print(numero)
+
+
+
+# exemplo de ValueError
+
+numero = int("abc")
