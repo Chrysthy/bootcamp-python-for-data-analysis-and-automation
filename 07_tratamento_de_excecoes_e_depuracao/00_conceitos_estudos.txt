@@ -1,0 +1,30 @@
+## 📚 Conceitos estudados
+
+Nesta aula foram trabalhados conceitos de:
+
+- Exceções
+- Tratamento de erros
+- `SyntaxError`
+- `TypeError`
+- `ValueError`
+- `ZeroDivisionError`
+- `FileNotFoundError`
+- `try`
+- `except`
+- `finally`
+- `raise`
+- Debugging
+- Print Debugging
+- Stack Trace
+- Logs
+- Módulo `logging`
+- `DEBUG`
+- `INFO`
+- `WARNING`
+- `ERROR`
+- `CRITICAL`
+- Monitoramento de scripts
+- Validação de dados
+- Prevenção de erros
+- Mensagens de erro claras
+- Manutenção de código
