@@ -1,0 +1,123 @@
+# Boas práticas
+
+## Prevenção de erros
+
+Sempre que possível, é melhor **prevenir um erro antes que ele aconteça**.
+
+Podemos validar informações antes de realizar determinada operação.
+
+Por exemplo:
+
+- Verificar se um valor contém números
+- Verificar se um arquivo existe
+- Conferir se uma informação obrigatória foi preenchida
+- Validar valores antes de realizar cálculos
+
+Essas validações tornam o programa mais seguro.
+
+---
+
+# Validação de dados
+
+Validar dados significa verificar se uma informação está correta antes de utilizá-la.
+
+Isso pode evitar diferentes tipos de erro.
+
+Por exemplo, antes de converter um valor para número, podemos verificar se ele realmente contém caracteres numéricos.
+
+A validação ajuda a evitar entradas inválidas e comportamentos inesperados.
+
+---
+
+# Mensagens de erro claras
+
+As mensagens apresentadas ao usuário devem ser **simples e claras**.
+
+Em vez de exibir apenas uma mensagem técnica, podemos explicar o que aconteceu de maneira compreensível.
+
+Por exemplo:
+
+Em vez de apenas apresentar um erro de divisão, podemos informar:
+
+`Não é possível dividir por zero.`
+
+Em vez de apresentar somente um erro de conversão, podemos informar:
+
+`Digite apenas números.`
+
+Mensagens claras ajudam o usuário a entender o problema e saber como corrigi-lo.
+
+---
+
+# Tratando diferentes exceções
+
+Um mesmo programa pode gerar mais de um tipo de erro.
+
+Por isso, podemos utilizar diferentes blocos `except`.
+
+Cada bloco pode tratar uma situação específica.
+
+Por exemplo:
+
+- Um `except` para divisão por zero
+- Outro para valores inválidos
+- Outro para arquivos inexistentes
+
+Isso permite oferecer um tratamento mais adequado para cada situação.
+
+---
+
+# Manutenção de código
+
+Um bom tratamento de exceções também facilita a manutenção do código.
+
+Quando os erros são tratados corretamente, o programa se torna:
+
+- Mais seguro
+- Mais confiável
+- Mais fácil de entender
+- Mais fácil de manter
+- Mais fácil de depurar
+
+O tratamento de exceções não serve apenas para impedir que um programa pare.
+
+Ele também ajuda a criar aplicações que conseguem lidar melhor com situações inesperadas.
+
+---
+
+# Resumo do fluxo de tratamento de erros
+
+Um fluxo básico pode funcionar assim:
+
+1. O programa recebe ou processa uma informação
+2. Os dados são validados
+3. O código é executado dentro de um `try`
+4. Caso ocorra uma exceção, o `except` trata o problema
+5. Se necessário, o `finally` executa uma ação final
+6. Logs podem registrar o que aconteceu durante o processo
+
+Esse tipo de estrutura ajuda a tornar o programa mais confiável e preparado para situações inesperadas.
+
+---
+
+
+numero = input("Digite um número: ")
+
+if numero.isdigit():
+    numero = int(numero)
+    print(numero)
+else:
+    print("Valor inválido")
+
+
+
+
+try:
+    numero = int(input("Digite um número: "))
+    print(10 / numero)
+
+except ZeroDivisionError:
+    print("Não é possível dividir por zero.")
+
+except ValueError:
+    print("Digite apenas números.")
