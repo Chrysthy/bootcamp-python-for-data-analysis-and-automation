@@ -1,0 +1,68 @@
+# `try` / `except`
+
+O bloco `try` / `except` é utilizado para **tratar exceções**.
+
+O `try` contém o código que queremos executar.
+
+Caso algum erro aconteça dentro dele, o `except` pode capturar e tratar esse erro.
+
+A lógica funciona assim:
+
+1. O Python tenta executar o código dentro do `try`
+2. Se nenhum erro acontecer, a execução continua normalmente
+3. Se ocorrer uma exceção, o Python procura um `except` correspondente
+4. O código dentro do `except` é executado
+
+Isso evita que determinados erros encerrem o programa imediatamente.
+
+---
+
+## Tratando erros específicos
+
+É possível criar tratamentos diferentes para diferentes tipos de erro.
+
+Por exemplo, um programa pode tratar separadamente:
+
+- `ZeroDivisionError`
+- `ValueError`
+- `FileNotFoundError`
+
+Essa abordagem permite mostrar mensagens mais claras e tomar decisões diferentes dependendo do problema encontrado.
+
+---
+
+# Bloco `finally`
+
+O bloco `finally` é executado **independentemente de ocorrer um erro ou não**.
+
+Ou seja:
+
+- Se o código funcionar, o `finally` será executado
+- Se ocorrer uma exceção, o `finally` também será executado
+
+Ele pode ser útil quando precisamos garantir que determinada ação aconteça no final da execução.
+
+---
+
+
+
+try:
+    numero = 10 / 0
+    print(numero)
+
+except ZeroDivisionError:
+    print("Erro: divisão por zero.")
+
+
+
+
+try:
+    numero = int("10")
+    print(numero)
+
+except ValueError:
+    print("Erro de conversão")
+
+finally:
+    print("Execução finalizada")
+
