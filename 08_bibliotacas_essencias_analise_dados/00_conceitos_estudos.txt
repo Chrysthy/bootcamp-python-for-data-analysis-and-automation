@@ -1,0 +1,33 @@
+## 📚 Conceitos estudados
+
+Nesta aula foram trabalhados conceitos de:
+
+- NumPy
+- Pandas
+- Matplotlib
+- Arrays
+- Operações com arrays
+- DataFrames
+- Dados estruturados
+- CSV
+- Excel
+- JSON
+- Leitura de dados
+- Exportação de dados
+- Acesso a colunas
+- `mean()`
+- `count()`
+- `describe()`
+- `groupby()`
+- Operações estatísticas
+- Agrupamento de dados
+- Gráfico de linhas
+- `plot()`
+- Gráfico de barras
+- `bar()`
+- Gráfico de dispersão
+- `scatter()`
+- `show()`
+- Visualização de dados
+- Integração entre NumPy, Pandas e Matplotlib
+- Fluxo de análise de dados
