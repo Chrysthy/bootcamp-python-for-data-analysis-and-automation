@@ -1,0 +1,114 @@
+## Arrays com NumPy
+
+Arrays são estruturas utilizadas para armazenar **vários valores numéricos** de forma eficiente.
+
+Com um array, podemos reunir vários números em uma única estrutura e realizar operações sobre esses valores.
+
+Na aula, também foram realizadas operações matemáticas diretamente sobre arrays.
+
+Por exemplo, é possível aplicar uma operação a todos os valores do array de uma vez.
+
+
+
+import numpy as np
+
+numeros = np.array([10, 20, 30, 40])
+
+print(numeros)
+
+
+
+# operações com arrays
+
+numeros = np.array([1,2,3,4])
+
+resultado = numeros * 2
+
+print(resultado)
+
+
+
+---
+
+## DataFrame
+
+Um DataFrame representa uma **tabela de dados**.
+
+Ele funciona de maneira semelhante a uma planilha, organizando as informações em:
+
+- Linhas
+- Colunas
+
+Cada coluna pode representar uma característica diferente dos dados.
+
+Por exemplo, uma tabela de produtos pode possuir colunas como:
+
+- Produto
+- Preço
+
+
+import pandas as pd
+
+dados = {
+    "produto": ["Notebook", "Mouse", "Teclado"],
+    "preco": [3500, 120, 200]
+}
+
+df = pd.DataFrame(dados)
+
+print(df)
+
+
+
+---
+
+# Leitura de dados
+
+O Pandas permite trabalhar com diferentes tipos de arquivos.
+
+Entre os formatos apresentados estão:
+
+- CSV
+- Excel
+- JSON
+
+Esses arquivos podem ser carregados para um DataFrame para que seus dados sejam manipulados e analisados.
+
+
+# Criar o arquivo CSV
+
+import pandas as pd
+
+dados = {
+    "produto": ["Notebook", "Mouse", "Teclado"],
+    "preco": [3500, 120, 200]
+}
+
+df = pd.DataFrame(dados)
+
+df.to_csv("dados.csv", index=False)
+
+
+
+import pandas as pd
+
+df = pd.read_csv("dados.csv")
+
+print(df)
+
+
+
+---
+
+## CSV
+
+O Pandas pode ser utilizado tanto para **salvar dados em CSV** quanto para **ler arquivos CSV**.
+
+Um DataFrame pode ser exportado para um arquivo `.csv`.
+
+Também podemos carregar um arquivo CSV existente e transformar seus dados em um DataFrame.
+
+Isso facilita o trabalho com informações que vieram de planilhas ou outros sistemas.
+
+---
+
