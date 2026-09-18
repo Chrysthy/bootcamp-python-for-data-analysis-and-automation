@@ -1,0 +1,177 @@
+# Agrupamentos
+
+Pandas também permite **agrupar dados por categorias**.
+
+Na aula foi utilizado o `groupby()`.
+
+Com ele, podemos reunir registros que possuem uma característica em comum.
+
+Por exemplo, se uma tabela possui vários registros do mesmo produto, podemos agrupá-los pelo nome do produto e depois realizar operações sobre cada grupo.
+
+Isso é útil quando queremos analisar informações separadas por categorias.
+
+
+
+dados = {
+    "produto": ["Notebook","Mouse","Mouse","Teclado"],
+    "preco": [3500,120,150,200]
+}
+
+df = pd.DataFrame(dados)
+
+df.groupby("produto").mean()
+
+
+
+
+---
+
+
+# Visualização com Matplotlib
+
+Nesta aula foram apresentados diferentes tipos de gráficos.
+
+## Gráfico de linhas
+
+O gráfico de linhas pode ser criado utilizando:
+
+`plot()`
+
+Ele representa valores através de pontos conectados por linhas.
+
+
+
+
+# Gráfico de linhas
+
+import matplotlib.pyplot as plt
+
+x = [1,2,3,4]
+y = [10,15,20,30]
+
+plt.plot(x,y)
+plt.show()
+
+
+
+---
+
+## Gráfico de barras
+
+O gráfico de barras pode ser criado utilizando:
+
+`bar()`
+
+Ele permite comparar valores entre diferentes categorias.
+
+Na aula, por exemplo, foram utilizados produtos e suas respectivas vendas.
+
+
+
+# Gráfico de barras
+
+produtos = ["Notebook","Mouse","Teclado"]
+vendas = [15,50,30]
+
+plt.bar(produtos,vendas)
+plt.show()
+
+
+
+
+
+---
+
+## Gráfico de dispersão
+
+O gráfico de dispersão pode ser criado utilizando:
+
+`scatter()`
+
+Ele representa valores através de pontos distribuídos no gráfico.
+
+
+# Gráfico de dispersão
+
+x = [1,2,3,4,5]
+y = [2,4,5,4,5]
+
+plt.scatter(x,y)
+plt.show()
+
+
+
+---
+
+## `show()`
+
+Depois de preparar um gráfico com Matplotlib, `show()` é utilizado para exibir a visualização criada.
+
+---
+
+
+
+# Integração das bibliotecas
+
+Na prática, **NumPy, Pandas e Matplotlib podem ser utilizados juntos** durante uma análise de dados.
+
+Cada biblioteca possui uma função diferente dentro do processo:
+
+- **NumPy** → trabalhar com valores e arrays
+- **Pandas** → organizar e manipular dados em tabelas
+- **Matplotlib** → visualizar os dados através de gráficos
+
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+dados = {
+    "produto": ["Notebook","Mouse","Teclado"],
+    "vendas": [15,50,30]
+}
+
+df = pd.DataFrame(dados)
+
+plt.bar(df["produto"], df["vendas"])
+
+plt.show()
+
+
+
+---
+
+# Fluxo de análise de dados
+
+Um fluxo típico apresentado na aula é:
+
+### 1. Ler os dados
+
+Primeiro, os dados são carregados para o programa.
+
+Eles podem vir, por exemplo, de arquivos CSV, Excel ou JSON.
+
+### 2. Processar os dados
+
+Depois, os dados podem ser organizados e manipulados.
+
+### 3. Analisar os dados
+
+Podemos realizar operações e cálculos para obter informações sobre o conjunto de dados.
+
+### 4. Visualizar os dados
+
+Por último, podemos utilizar gráficos para representar os resultados da análise.
+
+---
+
+# Exemplo de integração
+
+Um DataFrame pode armazenar informações como:
+
+- Produto
+- Quantidade de vendas
+
+Depois, essas informações podem ser utilizadas pelo Matplotlib para criar um gráfico.
+
+Dessa forma, o Pandas organiza os dados e o Matplotlib permite visualizá-los.
