@@ -1,0 +1,51 @@
+# Operações básicas com Pandas
+
+Com um DataFrame, podemos acessar colunas específicas e trabalhar com os valores armazenados nelas.
+
+Por exemplo, em uma tabela com produtos e preços, podemos acessar somente a coluna de preços.
+
+Isso permite realizar cálculos e análises em uma parte específica dos dados.
+
+
+
+
+print(df["preco"])
+
+
+
+
+---
+
+# Operações estatísticas
+
+Pandas também possui recursos para realizar operações estatísticas sobre os dados.
+
+
+
+df["preco"].mean()
+
+
+df["produto"].count()
+
+
+df.describe()
+
+
+
+
+Na aula foram utilizadas operações como:
+
+### `mean()`
+Utilizada para calcular a **média** dos valores.
+
+
+### `count()`
+Utilizada para realizar uma **contagem** dos dados na coluna.
+
+
+### `describe()`
+Utilizada para obter uma descrição estatística dos dados do DataFrame.
+
+
+Essas operações ajudam a obter informações importantes sobre um conjunto de dados.
+
