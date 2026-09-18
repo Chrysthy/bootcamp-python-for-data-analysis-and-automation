@@ -1,0 +1,18 @@
+## Introdução às bibliotecas de dados
+
+Python possui diversas bibliotecas que facilitam o trabalho com dados.
+
+Nesta aula foram apresentadas três bibliotecas muito utilizadas:
+
+- **NumPy** → computação numérica e arrays
+- **Pandas** → manipulação de dados em tabelas
+- **Matplotlib** → criação de gráficos e visualizações
+
+Essas bibliotecas podem ser utilizadas separadamente ou em conjunto durante uma análise de dados.
+
+
+# importando bibliotecas
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
