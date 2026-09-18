@@ -1,0 +1,70 @@
+# NumPy
+
+## O que é NumPy?
+
+NumPy é uma biblioteca utilizada para trabalhar com **arrays e operações matemáticas eficientes**.
+
+Ela é especialmente útil para manipular vários valores numéricos.
+
+Para operações numéricas, os arrays do NumPy podem ser mais eficientes do que listas comuns do Python.
+
+
+
+import numpy as np
+
+array = np.array([1, 2, 3, 4, 5])
+
+print(array)
+
+
+
+---
+
+
+# Pandas
+
+## O que é Pandas?
+
+Pandas é uma biblioteca utilizada para manipular **dados estruturados**, principalmente dados organizados em tabelas.
+
+Uma das principais estruturas utilizadas pelo Pandas é o **DataFrame**.
+
+
+
+import pandas as pd
+
+dados = {
+    "nome": ["Ana", "Carlos", "Maria"],
+    "idade": [25, 30, 28]
+}
+
+df = pd.DataFrame(dados)
+
+print(df)
+
+
+
+
+---
+
+
+# Matplotlib
+
+## O que é Matplotlib?
+
+Matplotlib é uma biblioteca utilizada para **criar gráficos e visualizações de dados**.
+
+As visualizações ajudam a representar informações de forma gráfica, facilitando a identificação de padrões e diferenças entre os dados.
+
+
+import matplotlib.pyplot as plt
+
+x = [1,2,3,4]
+y = [10,20,25,30]
+
+plt.plot(x,y)
+plt.show()
+
+
+---
+
