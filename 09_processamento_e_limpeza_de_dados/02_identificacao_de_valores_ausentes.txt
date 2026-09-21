@@ -1,0 +1,29 @@
+## Problemas comuns em datasets
+
+Alguns problemas comuns encontrados em conjuntos de dados são:
+
+- Valores ausentes
+- Dados duplicados
+- Valores inconsistentes
+- Formatos incorretos
+
+Esses problemas devem ser identificados e tratados antes da análise.
+
+
+
+
+import pandas as pd
+
+url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
+
+df = pd.read_csv(url)
+
+df.head()
+
+
+
+df.info()
+
+
+
+df.describe()
