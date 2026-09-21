@@ -1,0 +1,45 @@
+# 📂 Limpeza e Preparação de Dados em Python
+
+## Introdução à limpeza de dados
+
+Antes de analisar dados, precisamos garantir que eles possuem **boa qualidade**.
+
+Dados de baixa qualidade podem gerar:
+
+- Análises incorretas
+- Modelos imprecisos
+- Decisões erradas
+
+Por isso, uma etapa importante da análise de dados é a **limpeza de dados (data cleaning)**.
+
+---
+
+# Qualidade de dados
+
+A qualidade dos dados é importante porque influencia diretamente os resultados obtidos durante uma análise.
+
+Antes de utilizar um dataset, precisamos verificar se existem informações incorretas, incompletas ou inconsistentes.
+
+---
+
+## Problemas comuns em datasets
+
+Alguns problemas comuns encontrados em conjuntos de dados são:
+
+- Valores ausentes
+- Dados duplicados
+- Valores inconsistentes
+- Formatos incorretos
+
+Esses problemas devem ser identificados e tratados antes da análise.
+
+
+
+
+import pandas as pd
+
+url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
+
+df = pd.read_csv(url)
+
+df.head()
