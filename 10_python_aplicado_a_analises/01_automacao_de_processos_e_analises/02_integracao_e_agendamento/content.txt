@@ -1,0 +1,267 @@
+# Integração com banco de dados
+
+Python também pode ser utilizado para automatizar o armazenamento e a consulta de informações em bancos de dados.
+
+Na aula foi utilizado o banco:
+
+**SQLite**
+
+e o módulo:
+
+`sqlite3`
+
+---
+
+## `sqlite3.connect()`
+
+É utilizado para criar ou abrir uma conexão com um banco de dados.
+
+Na aula foi criado o arquivo:
+
+`dados.db`
+
+---
+
+## Cursor
+
+Depois da conexão, foi criado um **cursor**.
+
+O cursor é utilizado para executar comandos no banco de dados.
+
+---
+
+# Criando uma tabela
+
+Foi criada uma tabela chamada:
+
+`usuarios`
+
+com as informações:
+
+- Nome
+- Idade
+
+O comando utilizado foi `CREATE TABLE IF NOT EXISTS`.
+
+O `IF NOT EXISTS` evita tentar criar novamente a tabela caso ela já exista.
+
+---
+
+# Inserindo dados
+
+Depois da criação da tabela, foram inseridas informações utilizando:
+
+`INSERT INTO`
+
+Na aula, foi inserido um usuário com:
+
+- Nome: Ana
+- Idade: 25
+
+---
+
+# `commit()`
+
+Depois de realizar alterações no banco de dados, foi utilizado:
+
+`commit()`
+
+Ele confirma e salva as alterações realizadas.
+
+Por exemplo:
+
+- Criação de tabela
+- Inserção de registros
+
+---
+
+# Consultando dados
+
+Para buscar informações armazenadas no banco, foi utilizado:
+
+`SELECT`
+
+Na aula:
+
+`SELECT * FROM usuarios`
+
+foi utilizado para buscar todos os registros da tabela `usuarios`.
+
+---
+
+## `fetchall()`
+
+O método `fetchall()` recupera os registros encontrados pela consulta.
+
+Depois, os usuários foram percorridos e exibidos pelo programa.
+
+---
+
+# Encerrando a conexão
+
+Depois de terminar as operações no banco, a conexão foi encerrada utilizando:
+
+`close()`
+
+Encerrar a conexão é importante quando não precisamos mais utilizar o banco de dados.
+
+---
+
+# Agendamento de tarefas
+
+## Scripts programados
+
+Em sistemas reais, scripts podem ser executados automaticamente em horários específicos.
+
+Por exemplo:
+
+- Todos os dias
+- Em determinado horário
+- Durante a madrugada
+- Antes da geração de um relatório
+
+---
+
+# `datetime`
+
+Na aula foi utilizado o módulo:
+
+`datetime`
+
+Ele permite trabalhar com informações relacionadas a data e hora.
+
+O método:
+
+`datetime.datetime.now()`
+
+foi utilizado para obter o momento em que o script foi executado.
+
+Isso pode ser útil para registrar quando uma automação começou ou terminou.
+
+---
+
+# Automação de relatórios
+
+Também podemos criar uma função responsável por gerar relatórios.
+
+Na aula, foi criada uma função que:
+
+1. Calculava o total de vendas
+2. Obtinha a data e hora da execução
+3. Informava que o relatório havia sido gerado
+4. Exibia o total calculado
+
+Esse tipo de função poderia fazer parte de uma automação executada diariamente.
+
+---
+
+# Cron Jobs
+
+Em sistemas Linux podemos utilizar **cron jobs** para agendar a execução de tarefas.
+
+Na aula foi apresentado o exemplo:
+
+`0 8 * * * python script.py`
+
+Esse agendamento executaria o script automaticamente:
+
+**todos os dias às 08:00.**
+
+---
+
+# Como a automação funciona na prática
+
+Um fluxo apresentado na aula pode funcionar assim:
+
+### 1. Criar o script Python
+
+Por exemplo:
+
+`relatorio.py`
+
+O script contém as tarefas que precisam ser executadas.
+
+### 2. Criar um agendamento
+
+Um cron job é configurado para executar o script em determinado horário.
+
+### 3. Execução automática
+
+O sistema executa o programa automaticamente no horário configurado.
+
+Dessa forma, não é necessário executar o script manualmente todos os dias.
+
+---
+
+# Monitoramento
+
+Quando automatizamos processos, também precisamos verificar se os scripts estão funcionando corretamente.
+
+Uma forma de realizar esse acompanhamento é utilizando:
+
+**logs**
+
+---
+
+# Logs
+
+Logs são registros sobre acontecimentos durante a execução de um programa.
+
+Eles podem registrar informações como:
+
+- Início de uma execução
+- Etapas realizadas
+- Valores calculados
+- Avisos
+- Erros
+
+Na aula foi utilizado o módulo:
+
+`logging`
+
+---
+
+# `logging.basicConfig()`
+
+O `basicConfig()` permite configurar o funcionamento básico dos logs.
+
+Também podemos definir o nível das mensagens que queremos registrar.
+
+---
+
+# Níveis de log
+
+A aula apresentou diferentes níveis de log.
+
+### `DEBUG`
+
+Informações utilizadas para acompanhar detalhes da execução e ajudar na depuração.
+
+### `INFO`
+
+Informações gerais sobre o funcionamento do programa.
+
+Por exemplo:
+
+`Processamento iniciado`
+
+### `WARNING`
+
+Indica que um possível problema foi encontrado.
+
+### `ERROR`
+
+Indica que ocorreu um erro durante a execução.
+
+Esses níveis ajudam a organizar as mensagens produzidas pela aplicação.
+
+---
+
+# Monitoramento de uma automação
+
+Na aula, uma função de processamento registrava informações como:
+
+- Início do processamento
+- Total calculado
+
+Isso permite acompanhar o que aconteceu mesmo quando o script é executado automaticamente.
