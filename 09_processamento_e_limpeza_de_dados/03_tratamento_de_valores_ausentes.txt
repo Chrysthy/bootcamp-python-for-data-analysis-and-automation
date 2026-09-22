@@ -51,15 +51,6 @@ Depois do preenchimento, podemos verificar novamente se ainda existem valores au
 
 ---
 
-# Normalização e padronização
-
-Durante a preparação de dados, também pode ser necessário transformar os valores.
-
-Essas transformações ajudam a deixar os dados mais adequados para análise.
-
-
----
-
 ## Por que verificar valores ausentes?
 
 Valores ausentes podem afetar uma análise.
