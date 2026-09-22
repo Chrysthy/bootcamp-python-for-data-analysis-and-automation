@@ -49,3 +49,13 @@ Depois da normalização:
 - Os demais valores ficam distribuídos entre eles
 
 Isso facilita determinadas análises e comparações.
+
+
+
+df["Age_log"] = df["Age"].apply(lambda x: x)
+
+
+
+df["Fare_normalized"] = (df["Fare"] - df["Fare"].min()) / (df["Fare"].max() - df["Fare"].min())
+
+df.head()
