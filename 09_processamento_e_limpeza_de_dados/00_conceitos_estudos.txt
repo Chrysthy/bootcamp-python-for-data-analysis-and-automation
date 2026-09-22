@@ -1,0 +1,30 @@
+## 📚 Conceitos estudados
+
+Nesta aula foram trabalhados conceitos de:
+
+- Limpeza de dados
+- Data Cleaning
+- Qualidade de dados
+- Datasets
+- Valores ausentes
+- `NaN`
+- Dados duplicados
+- Dados inconsistentes
+- Formatos incorretos
+- `head()`
+- `info()`
+- `describe()`
+- `isnull()`
+- `dropna()`
+- `fillna()`
+- Média
+- Transformação de variáveis
+- `apply()`
+- Escala de dados
+- Normalização
+- Pré-processamento
+- Automação de pré-processamento
+- Pipeline de dados
+- Reprodutibilidade
+- Validação de datasets
+- Preparação de dados
