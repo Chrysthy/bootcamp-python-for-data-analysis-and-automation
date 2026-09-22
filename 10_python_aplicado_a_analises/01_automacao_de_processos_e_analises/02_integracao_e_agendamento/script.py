@@ -58,8 +58,47 @@ for usuario in dados:
 
 
 
-
-
 conn.close()
 
 print("Conexão com o banco encerrada")
+
+
+
+
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+logging.info("Script de automação iniciado")
+
+
+
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+def processar_dados():
+
+    logging.info("Processamento iniciado")
+
+    vendas = [100, 200, 150]
+
+    total = sum(vendas)
+
+    logging.info("Total calculado: %s", total)
+
+processar_dados()
+
+
+
+
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+logging.debug("Informação de depuração")
+logging.info("Processo iniciado")
+logging.warning("Possível problema detectado")
+logging.error("Erro na execução")
