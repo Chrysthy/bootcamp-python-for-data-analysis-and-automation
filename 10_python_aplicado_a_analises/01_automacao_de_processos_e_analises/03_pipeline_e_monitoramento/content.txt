@@ -1,0 +1,152 @@
+# Projeto prático de automação
+
+## O que é um pipeline de dados?
+
+Um **pipeline de dados** é um processo automatizado que executa várias etapas em sequência.
+
+O fluxo apresentado na aula foi:
+
+1. Coleta de dados
+2. Processamento
+3. Análise
+4. Geração de resultados
+
+Pipelines são utilizados em áreas como:
+
+- Análise de dados
+- Engenharia de dados
+- Relatórios automáticos
+
+---
+
+# Dataset utilizado no projeto
+
+No projeto prático, o código carrega o arquivo:
+
+`tips.csv`
+
+utilizando Pandas.
+
+As informações presentes no dataset incluem:
+
+- `total_bill` → valor total da conta
+- `tip` → valor da gorjeta
+- `sex` → sexo
+- `smoker` → indica se é fumante
+- `day` → dia
+- `time` → período da refeição
+- `size` → tamanho do grupo
+
+> **Observação:** o texto da aula menciona um dataset de vendas de e-commerce, mas o código utilizado nessa parte carrega o dataset `tips.csv`, que contém informações de contas e gorjetas de restaurante.
+> 
+
+---
+
+# Processamento automático dos dados
+
+Depois de carregar o dataset, foi calculado o total de gorjetas.
+
+Para isso foi utilizada a coluna:
+
+`tip`
+
+junto com:
+
+`sum()`
+
+O resultado obtido foi aproximadamente:
+
+`731,58`
+
+---
+
+# Agrupamento dos dados
+
+Também foi utilizado:
+
+`groupby()`
+
+para agrupar as gorjetas por dia.
+
+O processo pode ser entendido como:
+
+`groupby("day")`
+
+→ agrupa os registros pelo dia.
+
+Depois:
+
+`["tip"].sum()`
+
+→ soma as gorjetas de cada grupo.
+
+O resultado apresentado foi:
+
+- Sexta-feira → `51.96`
+- Sábado → `260.40`
+- Domingo → `247.39`
+- Quinta-feira → `171.83`
+
+Isso permite analisar os dados separadamente por categoria.
+
+---
+
+# Criando um pipeline automatizado
+
+No final da aula foi criada uma função chamada:
+
+`pipeline_restaurante()`
+
+Essa função reúne várias etapas em um único processo.
+
+O pipeline:
+
+1. Carrega o dataset
+2. Calcula o total de gorjetas
+3. Cria um novo DataFrame com o resultado
+4. Gera um arquivo CSV
+5. Informa que o pipeline foi executado
+
+---
+
+# Geração automática de relatório
+
+O pipeline cria um arquivo chamado:
+
+`relatorio_gorjetas.csv`
+
+Para salvar o DataFrame foi utilizado:
+
+`to_csv()`
+
+Assim, o resultado da análise é automaticamente transformado em um novo arquivo.
+
+---
+
+# Fluxo completo da automação
+
+Podemos visualizar o processo dessa forma:
+
+**Fonte de dados**
+
+↓
+
+**Coleta dos dados**
+
+↓
+
+**Processamento**
+
+↓
+
+**Análise**
+
+↓
+
+**Geração do resultado**
+
+↓
+
+**Arquivo de relatório**
+
+Esse é um exemplo simples de como várias tarefas podem ser reunidas em uma única automação.
