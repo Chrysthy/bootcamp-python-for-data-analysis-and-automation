@@ -1,0 +1,51 @@
+# Normalização e padronização
+
+Durante a preparação de dados, também pode ser necessário transformar os valores.
+
+Essas transformações ajudam a deixar os dados mais adequados para análise.
+
+---
+
+## Transformação de variáveis
+
+Às vezes precisamos transformar uma variável para facilitar a análise.
+
+Com Pandas, podemos aplicar operações sobre os valores de uma coluna.
+
+Um dos recursos utilizados para isso é:
+
+`apply()`
+
+Ele permite aplicar uma função aos valores de uma coluna.
+
+---
+
+# Escala de dados
+
+Algumas variáveis podem possuir escalas muito diferentes.
+
+Por exemplo, uma coluna pode possuir valores entre `0` e `10`, enquanto outra possui valores entre `0` e `500`.
+
+Em alguns casos, pode ser útil colocar essas informações em uma escala semelhante.
+
+---
+
+## Normalização
+
+Na aula foi utilizada uma normalização que transforma os valores para uma escala entre:
+
+`0` e `1`
+
+A transformação considera:
+
+- O valor atual
+- O menor valor da coluna
+- O maior valor da coluna
+
+Depois da normalização:
+
+- O menor valor fica próximo de `0`
+- O maior valor fica próximo de `1`
+- Os demais valores ficam distribuídos entre eles
+
+Isso facilita determinadas análises e comparações.
