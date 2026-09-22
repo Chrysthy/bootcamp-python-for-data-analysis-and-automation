@@ -1,0 +1,144 @@
+## Introdução à automação
+
+**Automação** é o processo de executar tarefas automaticamente utilizando programas.
+
+Em vez de realizar uma tarefa manualmente sempre que ela for necessária, podemos criar scripts que executam essas etapas de forma automática.
+
+A automação pode ajudar a:
+
+- Economizar tempo
+- Reduzir erros
+- Processar grandes volumes de dados
+
+Python é muito utilizado para automação por permitir trabalhar com arquivos, APIs, bancos de dados, relatórios e outras tarefas.
+
+---
+
+# Cenários reais de automação
+
+A automação pode ser utilizada em diferentes situações.
+
+Alguns exemplos apresentados na aula são:
+
+- Geração automática de relatórios
+- Coleta de dados da internet
+- Processamento diário de arquivos
+- Atualização de bancos de dados
+- Monitoramento de sistemas
+
+Um programa pode executar essas tarefas automaticamente sem que seja necessário repetir todo o processo manualmente.
+
+---
+
+# Manipulação automatizada de arquivos
+
+## Processamento automático de arquivos
+
+Uma das formas mais comuns de automação é trabalhar automaticamente com arquivos.
+
+Um script pode:
+
+- Ler arquivos
+- Processar informações
+- Realizar cálculos
+- Gerar resultados
+- Criar relatórios
+
+Na aula, foi utilizado um arquivo chamado `vendas.txt`.
+
+O arquivo possuía diferentes valores de vendas.
+
+O programa:
+
+1. Abriu o arquivo
+2. Leu cada linha
+3. Converteu os valores para números
+4. Somou os valores
+5. Exibiu o total das vendas
+
+O resultado foi:
+
+`750`
+
+---
+
+## `open()`
+
+A função `open()` é utilizada para abrir arquivos.
+
+Podemos utilizar diferentes modos.
+
+### `"w"`
+
+Significa **write**.
+
+É utilizado para escrever informações em um arquivo.
+
+### `"r"`
+
+Significa **read**.
+
+É utilizado para ler o conteúdo de um arquivo.
+
+---
+
+## Leitura linha por linha
+
+O arquivo também pode ser percorrido linha por linha.
+
+Cada linha pode ser processada individualmente.
+
+Na aula, cada valor foi:
+
+- Lido do arquivo
+- Limpo com `strip()`
+- Convertido para número com `int()`
+- Adicionado ao total
+
+Esse processo permite automatizar cálculos utilizando informações armazenadas em arquivos.
+
+---
+
+# Integração com APIs
+
+## Coleta automática de dados
+
+Uma **API** permite que diferentes sistemas compartilhem informações.
+
+Com Python, podemos utilizar APIs para coletar dados automaticamente da internet.
+
+Na aula foi utilizada a biblioteca:
+
+`requests`
+
+---
+
+## `requests.get()`
+
+O método `get()` realiza uma solicitação para um endereço da internet.
+
+Na aula, foi utilizada a API **Agify**.
+
+A API recebeu o nome:
+
+`ana`
+
+e retornou informações relacionadas a esse nome.
+
+---
+
+## `.json()`
+
+A resposta da API foi convertida utilizando:
+
+`response.json()`
+
+Isso transforma os dados recebidos em uma estrutura que pode ser utilizada pelo Python.
+
+O resultado apresentado na aula possuía informações como:
+
+- Nome
+- Idade
+- Quantidade de registros
+
+Assim, um programa pode buscar informações externas e utilizá-las automaticamente.
