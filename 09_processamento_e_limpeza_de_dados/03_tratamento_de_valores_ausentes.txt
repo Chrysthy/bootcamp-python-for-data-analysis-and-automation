@@ -1,0 +1,99 @@
+# Tratamento de valores ausentes
+
+Um dos problemas mais comuns em datasets são os **valores ausentes**.
+
+Eles representam informações que não foram registradas ou que são desconhecidas.
+
+---
+
+## O que é `NaN`?
+
+`NaN` significa **Not a Number**.
+
+Ele pode ser utilizado para representar **valores ausentes ou desconhecidos** dentro de um dataset.
+
+Antes de realizar uma análise, é importante identificar onde esses valores aparecem.
+
+---
+
+## Identificando valores ausentes
+
+Podemos verificar quais colunas possuem valores ausentes e contar quantos registros estão faltando.
+
+Essa análise ajuda a decidir qual estratégia será utilizada para tratar os dados.
+
+
+# Remoção de valores ausentes
+
+Uma forma de tratar valores ausentes é remover os registros que possuem dados faltantes.
+
+No Pandas, podemos utilizar:
+
+`dropna()`
+
+Essa operação remove linhas que possuem valores ausentes.
+
+É importante analisar cada situação antes de remover informações, porque a exclusão pode reduzir significativamente a quantidade de dados disponível.
+
+---
+
+# Preenchimento de valores ausentes
+
+Em vez de remover registros, também podemos **preencher os valores faltantes**.
+
+No Pandas, podemos utilizar:
+
+`fillna()`
+
+Na aula, os valores ausentes da coluna de idade foram preenchidos utilizando a **média das idades**.
+
+Depois do preenchimento, podemos verificar novamente se ainda existem valores ausentes naquela coluna.
+
+---
+
+# Normalização e padronização
+
+Durante a preparação de dados, também pode ser necessário transformar os valores.
+
+Essas transformações ajudam a deixar os dados mais adequados para análise.
+
+
+---
+
+## Por que verificar valores ausentes?
+
+Valores ausentes podem afetar uma análise.
+
+Antes de trabalhar com os dados, precisamos decidir o que fazer com eles.
+
+Dependendo da situação, podemos:
+
+    Remover registros com valores ausentes
+    Preencher os valores faltantes
+    Utilizar média, mediana ou outro valor
+    Manter os valores ausentes quando fizer sentido
+
+Essa verificação faz parte do processo de limpeza e preparação de dados.
+
+
+
+
+df.isnull().sum()
+
+O .sum() está sendo usado para contar quantos True existem em cada coluna.
+isnull() → encontra os valores ausentes
+sum()    → conta quantos foram encontrados
+
+
+
+Remoção de valores ausentes
+df_limpo = df.dropna()
+
+df_limpo.head()
+
+
+
+Preenchimento de valores ausentes
+df["Age"] = df["Age"].fillna(df["Age"].mean())
+df["Age"].isnull().sum()
+np.int64(0)
