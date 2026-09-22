@@ -1,0 +1,140 @@
+# Automação de Pré-processamento
+
+Quando trabalhamos com muitos dados, podemos automatizar as etapas de preparação.
+
+Isso evita repetir manualmente as mesmas operações toda vez que um dataset for utilizado.
+
+---
+
+# Pipelines de dados
+
+Um **pipeline de dados** executa várias etapas automaticamente.
+
+O fluxo apresentado na aula foi:
+
+### 1. Carregar dados
+
+Primeiro, o dataset é carregado para o programa.
+
+### 2. Limpar dados
+
+Problemas encontrados nos dados são tratados.
+
+Por exemplo:
+
+- Valores ausentes
+- Informações inválidas
+- Dados inconsistentes
+
+### 3. Transformar dados
+
+Depois, os dados podem passar por transformações ou normalizações.
+
+### 4. Gerar o dataset final
+
+Depois das etapas de preparação, temos um dataset pronto para as próximas análises.
+
+---
+
+# Funções para limpeza de dados
+
+As etapas de limpeza podem ser reunidas dentro de uma função.
+
+Isso permite automatizar tarefas como:
+
+- Preencher valores ausentes
+- Transformar variáveis
+- Normalizar valores
+- Retornar os dados preparados
+
+Dessa forma, o mesmo processo pode ser reutilizado em diferentes momentos.
+
+---
+
+# Documentação e validação
+
+Além de preparar os dados, também é importante documentar e validar o processo realizado.
+
+Isso ajuda a garantir que a análise seja organizada e confiável.
+
+---
+
+## Reprodutibilidade
+
+Uma análise deve ser **reproduzível**.
+
+Isso significa que outra pessoa deve conseguir:
+
+- Executar o código
+- Repetir as etapas realizadas
+- Obter os mesmos resultados
+
+A reprodutibilidade é importante principalmente em projetos de análise de dados, pois permite verificar e repetir o processo utilizado.
+
+---
+
+# Validação de datasets
+
+Antes de utilizar um dataset, devemos verificar:
+
+- Valores ausentes
+- Tipos de dados
+- Consistência das informações
+
+Também podemos analisar:
+
+- Quantidade de linhas
+- Quantidade de colunas
+- Quantidade de valores ausentes em cada coluna
+
+Essa validação ajuda a confirmar se os dados estão preparados corretamente.
+
+---
+
+# Fluxo de preparação dos dados
+
+Um processo básico de preparação pode seguir esta ordem:
+
+1. Carregar o dataset
+2. Visualizar os dados
+3. Verificar sua estrutura
+4. Identificar valores ausentes
+5. Remover ou preencher valores faltantes
+6. Transformar variáveis quando necessário
+7. Normalizar os dados
+8. Automatizar etapas de pré-processamento
+9. Validar o dataset
+10. Utilizar os dados preparados na análise
+
+
+
+def limpar_dados(df):
+
+    df["Age"].fillna(df["Age"].mean(), inplace=True)
+
+    df["Fare_normalized"] = (
+        df["Fare"] - df["Fare"].min()
+    ) / (df["Fare"].max() - df["Fare"].min())
+
+    return df
+
+
+
+
+df = limpar_dados(df)
+
+df.head()
+
+
+
+
+def validar_dataset(df):
+
+    print("Linhas:", df.shape[0])
+    print("Colunas:", df.shape[1])
+    print("\nValores ausentes:")
+
+    print(df.isnull().sum())
+
+
+validar_dataset(df)
