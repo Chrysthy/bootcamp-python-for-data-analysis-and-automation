@@ -10,6 +10,212 @@ Alguns problemas comuns encontrados em conjuntos de dados são:
 Esses problemas devem ser identificados e tratados antes da análise.
 
 
+# Inspeção dos dados
+
+Antes de realizar a limpeza, podemos analisar a estrutura do dataset.
+
+O Pandas possui ferramentas que ajudam a entender as informações disponíveis.
+
+
+
+### `head()`
+
+Permite visualizar as primeiras linhas do DataFrame.
+
+É útil para ter uma visão inicial dos dados.
+
+
+
+
+### `info()`
+
+Apresenta informações sobre o DataFrame, como:
+
+- Quantidade de registros
+- Quantidade de colunas
+- Tipos de dados
+- Quantidade de valores não nulos
+
+
+
+### `describe()`
+
+Apresenta informações estatísticas das colunas numéricas.
+O método describe() do Pandas gera um resumo estatístico das colunas numéricas de um DataFrame.
+
+Entre elas:
+
+- Contagem
+- Média
+- Desvio padrão
+- Valor mínimo
+- Quartis
+- Valor máximo
+
+sibsp = número de irmãos ou cônjuges abordo
+
+
+
+Informação	    Significado
+count	        Quantidade de valores preenchidos
+mean	        Média dos valores
+std	            Desvio padrão
+min	            Menor valor encontrado
+25%	            Primeiro quartil
+50%	            Mediana
+75%	            Terceiro quartil
+max	            Maior valor encontrado
+
+
+
+* count
+
+Mostra quantos valores existem em cada coluna.
+
+Por exemplo:
+
+PassengerId → 891
+Age → 714
+Fare → 891
+
+O dataset possui 891 passageiros, mas somente 714 possuem idade registrada.
+
+Isso significa que existem:
+
+891 - 714 = 177
+
+177 valores ausentes na coluna Age.
+
+
+
+* mean
+
+Representa a média dos valores.
+
+Na coluna Age:
+
+mean = 29.699118
+
+A idade média dos passageiros que possuem idade registrada é de aproximadamente:
+
+29,7 anos
+
+Na coluna Fare:
+
+mean = 32.204208
+
+O valor médio pago pela passagem foi aproximadamente:
+
+32,20
+
+
+
+* std
+
+std significa Standard Deviation, ou desvio padrão.
+
+Ele mostra o quanto os valores estão espalhados em relação à média.
+
+Por exemplo:
+
+Age
+mean = 29.69
+std = 14.52
+
+Isso mostra que existe uma variação considerável nas idades dos passageiros.
+
+Na coluna Fare:
+
+mean = 32.20
+std = 49.69
+
+O desvio padrão é alto porque existem grandes diferenças entre os valores pagos pelas passagens.
+
+
+
+
+* min
+
+Representa o menor valor encontrado.
+
+Na coluna Age:
+
+min = 0.42
+
+A menor idade registrada no dataset é de aproximadamente 0,42 ano.
+
+Na coluna Fare:
+
+min = 0
+
+O menor valor registrado para passagem é 0.
+
+
+
+
+* 25%
+
+Representa o primeiro quartil.
+
+Na idade:
+
+25% = 20.125
+
+Isso significa que aproximadamente 25% das idades registradas são menores ou iguais a 20,125 anos.
+
+
+
+
+* 50%
+
+Representa a mediana.
+
+A mediana é o valor que fica no centro dos dados quando eles são colocados em ordem.
+
+Na coluna Age:
+
+50% = 28
+
+Isso significa que aproximadamente metade das idades registradas está abaixo ou igual a 28 anos, enquanto a outra metade está acima.
+
+Na coluna Fare:
+
+50% = 14.4542
+
+A mediana do valor das passagens é aproximadamente 14,45.
+
+
+
+* 75%
+
+Representa o terceiro quartil.
+
+Na coluna Age:
+
+75% = 38
+
+Isso significa que aproximadamente 75% das idades registradas são menores ou iguais a 38 anos.
+
+
+
+
+* max
+
+Representa o maior valor encontrado.
+
+Na coluna Age:
+
+max = 80
+
+A maior idade registrada é 80 anos.
+
+Na coluna Fare:
+
+max = 512.3292
+
+O maior valor de passagem registrado é aproximadamente 512,33.
+
+
 
 
 import pandas as pd
