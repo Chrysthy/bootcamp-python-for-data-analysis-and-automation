@@ -1,0 +1,46 @@
+## 📚 Conceitos estudados
+
+Nesta aula foram trabalhados conceitos de:
+
+- Automação
+- Scripts
+- Processamento automático de arquivos
+- `open()`
+- Leitura de arquivos
+- Escrita de arquivos
+- `strip()`
+- `int()`
+- APIs
+- `requests`
+- `requests.get()`
+- JSON
+- `.json()`
+- SQLite
+- `sqlite3`
+- Conexão com banco de dados
+- Cursor
+- `CREATE TABLE`
+- `INSERT`
+- `SELECT`
+- `commit()`
+- `fetchall()`
+- `close()`
+- Agendamento de tarefas
+- `datetime`
+- Scripts programados
+- Cron Jobs
+- Relatórios automáticos
+- Logs
+- `logging`
+- `DEBUG`
+- `INFO`
+- `WARNING`
+- `ERROR`
+- Monitoramento
+- Pipeline de dados
+- Pandas
+- `sum()`
+- `groupby()`
+- DataFrame
+- `to_csv()`
+- Automação de relatórios
