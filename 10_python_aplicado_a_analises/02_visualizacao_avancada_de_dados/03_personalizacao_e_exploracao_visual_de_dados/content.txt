@@ -1,0 +1,93 @@
+# Personalização de gráficos
+
+A personalização pode melhorar a apresentação das visualizações.
+
+Na aula foram apresentados elementos como:
+
+- Cores
+- Estilos
+- Títulos
+- Layouts
+
+---
+
+## `figure()`
+
+O Matplotlib permite definir características da figura.
+
+Por exemplo:
+
+`figsize`
+
+é utilizado para definir o tamanho do gráfico.
+
+---
+
+# Gráfico de barras
+
+Também foi criado um gráfico utilizando:
+
+`bar()`
+
+O gráfico utilizou:
+
+- Dia no eixo X
+- Gorjeta no eixo Y
+
+O título utilizado foi:
+
+**Gorjetas por dia**
+
+Gráficos de barras são úteis para comparar valores entre categorias.
+
+---
+
+# Dashboards
+
+Um **dashboard** reúne vários gráficos em uma única visualização.
+
+Isso permite acompanhar diferentes métricas em um único painel.
+
+---
+
+# `subplots()`
+
+O método:
+
+`subplots()`
+
+permite criar vários gráficos dentro da mesma figura.
+
+Na aula foi criado um dashboard contendo dois gráficos:
+
+- Histograma da distribuição das contas
+- Boxplot das gorjetas por dia
+
+---
+
+# Histograma
+
+O histograma foi criado utilizando:
+
+`sns.histplot()`
+
+Ele foi utilizado para representar a:
+
+**Distribuição da Conta**
+
+Esse tipo de gráfico ajuda a visualizar como os valores estão distribuídos.
+
+---
+
+# Boxplot
+
+O boxplot foi criado utilizando:
+
+`sns.boxplot()`
+
+Na aula, ele foi utilizado para comparar as gorjetas entre os diferentes dias.
+
+O gráfico relacionou:
+
+- Dia da semana
+- Valor da gorjeta
