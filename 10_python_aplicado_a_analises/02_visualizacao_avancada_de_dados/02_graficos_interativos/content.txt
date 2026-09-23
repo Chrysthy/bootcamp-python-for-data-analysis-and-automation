@@ -1,0 +1,109 @@
+# Bibliotecas para visualização de dados
+
+Python possui diferentes bibliotecas para criar visualizações.
+
+Na aula foram utilizadas:
+
+### Matplotlib
+
+Biblioteca utilizada para criar **gráficos básicos**.
+
+### Seaborn
+
+Biblioteca utilizada principalmente para **gráficos estatísticos**.
+
+### Plotly
+
+Biblioteca utilizada para criar **gráficos interativos**.
+
+---
+
+# Matplotlib
+
+## Gráfico de dispersão
+
+Foi utilizado um **gráfico de dispersão**, ou *scatter plot*, para visualizar a relação entre:
+
+- Valor total da conta
+- Valor da gorjeta
+
+O método utilizado foi:
+
+`scatter()`
+
+Cada ponto do gráfico representa uma observação do dataset.
+
+Nesse exemplo:
+
+- Eixo X → valor da conta
+- Eixo Y → valor da gorjeta
+
+O gráfico permite visualizar como os dois valores se relacionam.
+
+---
+
+## Personalização dos gráficos
+
+Um gráfico pode receber informações adicionais para facilitar sua interpretação.
+
+### `xlabel()`
+
+Define o nome do eixo X.
+
+### `ylabel()`
+
+Define o nome do eixo Y.
+
+### `title()`
+
+Define o título do gráfico.
+
+### `show()`
+
+Exibe o gráfico criado.
+
+---
+
+# Seaborn
+
+O Seaborn também foi utilizado para criar um gráfico de dispersão.
+
+O método utilizado foi:
+
+`sns.scatterplot()`
+
+Nesse caso, novamente foram comparadas:
+
+- `total_bill`
+- `tip`
+
+O Seaborn oferece uma forma prática de criar visualizações diretamente a partir de um DataFrame.
+
+---
+
+# Plotly
+
+Com Plotly também foi criado um gráfico de dispersão.
+
+O método utilizado foi:
+
+`px.scatter()`
+
+Além de representar a relação entre conta e gorjeta, o gráfico utilizou:
+
+`color="day"`
+
+Isso permite representar cada dia utilizando uma categoria diferente dentro da visualização.
+
+---
+
+# Gráficos interativos
+
+Uma das principais características do Plotly é a possibilidade de criar **visualizações interativas**.
+
+Em gráficos interativos, o usuário pode:
+
+- Passar o mouse sobre os pontos
+- Visualizar informações adicionais
+- Explorar categorias
+- Identificar padrões de maneira dinâmica
