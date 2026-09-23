@@ -1,0 +1,54 @@
+## 📚 Conceitos estudados
+
+Nesta aula foram trabalhados conceitos de:
+
+- Visualização de dados
+- Matplotlib
+- Seaborn
+- Plotly
+- Dataset `tips`
+- DataFrame
+- Scatter Plot
+- `scatter()`
+- `scatterplot()`
+- `px.scatter()`
+- Gráfico de barras
+- `bar()`
+- Histograma
+- `histplot()`
+- Boxplot
+- `boxplot()`
+- Countplot
+- `countplot()`
+- Personalização de gráficos
+- `xlabel()`
+- `ylabel()`
+- `title()`
+- `show()`
+- `figure()`
+- `figsize`
+- `subplots()`
+- Dashboard
+- Storytelling com dados
+- Gráficos interativos
+- `color`
+- `size`
+- `hover_data`
+- Correlação
+- `corr()`
+- Heatmap
+- `heatmap()`
+- `annot`
+- `cmap`
+- `tight_layout()`
+- Dataset Gapminder
+- PIB per capita
+- Expectativa de vida
+- População
+- `hover_name`
+- Escala logarítmica
+- `animation_frame`
+- Mapas interativos
+- `choropleth()`
+- Facetas
+- `facet_col`
