@@ -1,0 +1,216 @@
+# Dashboard simples de visualização
+
+Foi criado um dashboard com quatro gráficos utilizando:
+
+`subplots(2, 2)`
+
+Isso organiza a visualização em:
+
+- 2 linhas
+- 2 colunas
+
+---
+
+## Gráficos utilizados no dashboard
+
+### Distribuição das contas
+
+Criada utilizando:
+
+`histplot()`
+
+Mostra a distribuição dos valores das contas.
+
+### Gorjetas por dia
+
+Criada utilizando:
+
+`boxplot()`
+
+Permite comparar as gorjetas de acordo com o dia.
+
+### Conta vs Gorjeta
+
+Criada utilizando:
+
+`scatterplot()`
+
+Mostra a relação entre o valor da conta e o valor da gorjeta.
+
+### Quantidade de clientes por dia
+
+Criada utilizando:
+
+`countplot()`
+
+Permite visualizar a quantidade de registros de cada dia.
+
+---
+
+# `tight_layout()`
+
+O método:
+
+`tight_layout()`
+
+foi utilizado para ajustar o espaçamento entre os gráficos do dashboard.
+
+Isso ajuda a organizar melhor os elementos dentro da figura.
+
+---
+
+# Dataset Gapminder
+
+Na parte de visualizações interativas também foi utilizado o dataset:
+
+`gapminder`
+
+disponibilizado pelo próprio Plotly.
+
+O dataset possui informações relacionadas a países ao longo dos anos.
+
+---
+
+# PIB e expectativa de vida
+
+Foi criado um gráfico interativo relacionando:
+
+- PIB per capita
+- Expectativa de vida
+- População
+- Continente
+- País
+- Ano
+
+---
+
+## `gdpPercap`
+
+Representa o PIB per capita.
+
+Foi utilizado no eixo X.
+
+---
+
+## `lifeExp`
+
+Representa a expectativa de vida.
+
+Foi utilizado no eixo Y.
+
+---
+
+## `pop`
+
+A população foi utilizada para definir o tamanho dos pontos.
+
+---
+
+## `continent`
+
+O continente foi utilizado para diferenciar os pontos por categoria.
+
+---
+
+## `hover_name`
+
+O nome do país aparece quando o usuário passa o mouse sobre o ponto.
+
+---
+
+## `log_x=True`
+
+Foi utilizada uma escala logarítmica no eixo X.
+
+---
+
+# Animação de dados
+
+Plotly também permite criar visualizações que mudam ao longo do tempo.
+
+Foi utilizado:
+
+`animation_frame="year"`
+
+Assim, o gráfico pode mostrar a evolução das informações em diferentes anos.
+
+---
+
+# Mapa interativo
+
+Também foi criado um mapa utilizando:
+
+`px.choropleth()`
+
+Esse tipo de visualização permite representar informações geográficas.
+
+Na aula, o mapa foi utilizado para representar a:
+
+**Expectativa de vida no mundo**
+
+---
+
+## Informações utilizadas no mapa
+
+### `locations`
+
+Utiliza o código do país para definir sua localização.
+
+### `color`
+
+A expectativa de vida foi utilizada para definir os valores apresentados no mapa.
+
+### `hover_name`
+
+Permite visualizar o nome do país.
+
+### `animation_frame`
+
+Permite acompanhar as mudanças ao longo dos anos.
+
+---
+
+# Facetas
+
+Plotly também permite dividir uma visualização em diferentes gráficos de acordo com uma categoria.
+
+Na aula foi utilizado:
+
+`facet_col="time"`
+
+Isso separou os dados de acordo com o horário da refeição.
+
+Assim, é possível visualizar os dados em painéis diferentes para cada categoria.
+
+---
+
+# Animação por categoria
+
+Também foi utilizado:
+
+`animation_frame="day"`
+
+Nesse caso, a visualização pode mudar de acordo com o dia.
+
+O gráfico também utilizou:
+
+- Conta total
+- Gorjeta
+- Sexo
+- Número de pessoas
+
+---
+
+# Fluxo da visualização de dados
+
+Um processo básico de visualização pode seguir esta ordem:
+
+1. Carregar os dados
+2. Escolher as variáveis que serão analisadas
+3. Escolher o tipo de gráfico
+4. Criar a visualização
+5. Personalizar títulos, eixos e layout
+6. Comparar valores e identificar padrões
+7. Criar dashboards quando necessário
+8. Utilizar visualizações interativas para explorar os dados
+9. Comunicar os resultados utilizando storytelling
