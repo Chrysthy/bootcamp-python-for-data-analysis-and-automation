@@ -1,0 +1,40 @@
+# 📂 Visualização de Dados
+
+## Importância da visualização de dados
+
+A **visualização de dados** permite transformar informações complexas em gráficos mais fáceis de interpretar.
+
+Com gráficos podemos:
+
+- Identificar padrões
+- Comparar valores
+- Detectar tendências
+- Comunicar resultados de forma clara
+
+Por isso, a visualização é uma etapa importante da análise de dados.
+
+---
+
+# Dataset utilizado
+
+Na aula foi utilizado um dataset real com informações sobre **gorjetas em restaurantes**.
+
+Entre os dados disponíveis estão:
+
+- Valor total da conta
+- Valor da gorjeta
+- Sexo
+- Informação sobre fumante
+- Dia da semana
+- Horário da refeição
+- Número de pessoas
+
+As principais colunas utilizadas são:
+
+- `total_bill` → valor total da conta
+- `tip` → valor da gorjeta
+- `sex` → sexo
+- `smoker` → indica se a pessoa é fumante
+- `day` → dia da semana
+- `time` → horário da refeição
+- `size` → número de pessoas
