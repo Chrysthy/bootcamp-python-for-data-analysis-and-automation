@@ -1,0 +1,109 @@
+# Storytelling com dados
+
+**Storytelling com dados** significa utilizar visualizações para contar uma história.
+
+O objetivo não é apenas apresentar gráficos, mas também **comunicar insights**.
+
+Um bom storytelling deve:
+
+- Mostrar o contexto
+- Destacar padrões
+- Explicar os resultados
+
+---
+
+# Gorjetas ao longo da semana
+
+Foi utilizado um boxplot para visualizar as gorjetas ao longo da semana.
+
+O gráfico relaciona:
+
+- `day`
+- `tip`
+
+Assim, podemos visualizar como os valores das gorjetas estão distribuídos entre os diferentes dias.
+
+---
+
+# Visualização interativa avançada com Plotly
+
+O gráfico interativo foi ampliado utilizando diferentes informações do dataset.
+
+Foram utilizadas:
+
+### `x`
+
+Valor total da conta.
+
+### `y`
+
+Valor da gorjeta.
+
+### `color`
+
+O dia foi utilizado para diferenciar categorias.
+
+### `size`
+
+O número de pessoas da mesa foi utilizado para definir o tamanho dos pontos.
+
+### `hover_data`
+
+Informações adicionais aparecem quando o usuário passa o mouse sobre os pontos.
+
+Na aula foram utilizadas:
+
+- Sexo
+- Horário da refeição
+
+Isso permite incluir várias dimensões de informação em uma única visualização.
+
+---
+
+# Heatmap de Correlação
+
+Um **heatmap** mostra a relação entre variáveis numéricas.
+
+Ele ajuda a identificar:
+
+- Padrões
+- Relações entre variáveis
+- Correlações
+
+---
+
+## Correlação
+
+Antes de criar o heatmap, foi calculada a correlação entre as colunas numéricas.
+
+Foi utilizado:
+
+`corr()`
+
+Nesse exemplo, foi utilizado:
+
+`numeric_only=True`
+
+para considerar apenas as variáveis numéricas.
+
+---
+
+## `sns.heatmap()`
+
+O heatmap foi criado utilizando:
+
+`sns.heatmap()`
+
+Também foram utilizados:
+
+### `annot=True`
+
+Exibe os valores da correlação dentro do gráfico.
+
+### `cmap`
+
+Define o esquema utilizado na visualização.
+
+Na aula foi utilizado:
+
+`coolwarm`
