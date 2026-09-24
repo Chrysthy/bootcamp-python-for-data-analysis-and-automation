@@ -1,0 +1,886 @@
+# 📂 Métricas de Avaliação
+
+## Avaliação de modelos em Ciência de Dados
+
+Treinar um modelo de **Machine Learning** é apenas uma parte do processo.
+
+Depois do treinamento, precisamos avaliar se o modelo está produzindo resultados adequados.
+
+Algumas perguntas importantes são:
+
+* O modelo está **superajustado (overfitting)**?
+* O modelo está **subajustado (underfitting)**?
+* O erro é aceitável para o problema?
+* Como comparar modelos diferentes?
+
+As métricas utilizadas dependem do tipo de problema.
+
+Nesta aula foram trabalhados três tipos:
+
+1. **Regressão** → prever valores contínuos
+2. **Classificação** → prever categorias
+3. **Agrupamento (Clustering)** → descobrir padrões e grupos nos dados
+
+---
+
+# Erro vs Resíduo
+
+Considere:
+
+* `y` → valor observado ou real
+* `ŷ` → valor previsto pelo modelo
+
+O erro é representado por:
+
+```text
+erro = valor real - valor previsto
+```
+
+Matematicamente:
+
+$$
+\varepsilon_i = y_i - \hat{y}_i
+$$
+
+Entretanto, o erro verdadeiro não é observado diretamente.
+
+Na prática, utilizamos o **resíduo**:
+
+$$
+e_i = y_i - \hat{y}_i
+$$
+
+O resíduo funciona como uma **estimativa observada do erro**.
+
+---
+
+## Como interpretar os resíduos?
+
+Em um modelo bem ajustado, esperamos que:
+
+* Os resíduos tenham média próxima de `0`
+* Não existam padrões estruturais nos resíduos
+* A variância seja aproximadamente constante
+
+Os resíduos são importantes para verificar a qualidade do ajuste do modelo.
+
+---
+
+# Avaliação de Modelos de Regressão
+
+## O que é regressão?
+
+Regressão é utilizada quando queremos prever um **valor numérico contínuo**.
+
+Na aula foi utilizado o dataset de imóveis **California Housing**.
+
+O objetivo é prever:
+
+`median_house_value`
+
+ou seja, o valor mediano das casas utilizando outras características dos imóveis.
+
+---
+
+# Preparação dos dados
+
+Antes de criar o modelo, algumas etapas foram realizadas.
+
+### Remoção de valores ausentes
+
+Foi utilizado:
+
+`dropna()`
+
+para remover registros com valores ausentes.
+
+---
+
+### Separação entre variáveis
+
+As características utilizadas para realizar a previsão foram armazenadas em:
+
+`X`
+
+Enquanto a variável que queremos prever foi armazenada em:
+
+`y`
+
+Nesse caso:
+
+`y = median_house_value`
+
+---
+
+### `get_dummies()`
+
+Foi utilizado:
+
+`pd.get_dummies()`
+
+para transformar variáveis categóricas em uma representação que possa ser utilizada pelo modelo.
+
+---
+
+# Divisão em treino e teste
+
+Os dados foram separados utilizando:
+
+`train_test_split()`
+
+A divisão utilizada foi:
+
+* **80%** para treinamento
+* **20%** para teste
+
+O conjunto de treinamento é utilizado para ensinar o modelo.
+
+O conjunto de teste é utilizado para avaliar como ele se comporta com dados que não foram utilizados durante o treinamento.
+
+---
+
+# Regressão Linear
+
+A **Regressão Linear** busca representar a relação entre a variável que queremos prever e as variáveis utilizadas como entrada.
+
+A fórmula apresentada foi:
+
+$$
+y = \beta_0 + \beta_1x_1 + \beta_2x_2 + ... + \beta_px_p + \varepsilon
+$$
+
+Onde:
+
+* `y` → variável resposta
+* `x` → variáveis explicativas
+* `β` → coeficientes do modelo
+* `ε` → erro aleatório
+
+---
+
+## Treinamento do modelo
+
+Foi utilizado:
+
+`LinearRegression()`
+
+Depois:
+
+`fit()`
+
+é responsável por treinar o modelo utilizando os dados de treinamento.
+
+E:
+
+`predict()`
+
+é utilizado para gerar previsões.
+
+---
+
+# Resíduos do modelo
+
+Depois de gerar as previsões, os resíduos podem ser calculados através da diferença entre:
+
+```text
+valor real - valor previsto
+```
+
+Ou:
+
+$$
+e_i = y_i - \hat{y}_i
+$$
+
+Esses valores ajudam a verificar onde e quanto o modelo está errando.
+
+---
+
+# Diagnóstico gráfico dos resíduos
+
+Também foram utilizadas visualizações para analisar os resíduos.
+
+## Resíduos vs Valores Preditos
+
+Um gráfico de dispersão foi utilizado para comparar:
+
+* Valores previstos
+* Resíduos
+
+Uma linha horizontal em `0` ajuda a visualizar como os erros estão distribuídos.
+
+---
+
+## Distribuição dos resíduos
+
+Também foi utilizado um histograma para visualizar a distribuição dos resíduos.
+
+Isso ajuda a observar como os erros do modelo estão distribuídos.
+
+---
+
+# MAE — Mean Absolute Error
+
+O **MAE** significa:
+
+**Mean Absolute Error**
+
+ou:
+
+**Erro Absoluto Médio**
+
+Sua fórmula é:
+
+$$
+MAE =
+\frac{1}{n}
+\sum_{i=1}^{n}
+|y_i-\hat{y}_i|
+$$
+
+Ele calcula a média dos erros absolutos.
+
+Em outras palavras:
+
+> Em média, quanto o modelo está errando?
+
+Uma vantagem é que o resultado permanece na **unidade da variável que estamos prevendo**.
+
+---
+
+# MSE — Mean Squared Error
+
+O **MSE** significa:
+
+**Mean Squared Error**
+
+ou:
+
+**Erro Quadrático Médio**
+
+Sua fórmula é:
+
+$$
+MSE =
+\frac{1}{n}
+\sum_{i=1}^{n}
+(y_i-\hat{y}_i})^2
+$$
+
+O MSE eleva cada erro ao quadrado.
+
+Por isso, erros maiores recebem uma penalização maior.
+
+---
+
+## MAE vs MSE
+
+Uma diferença importante é:
+
+```text
+MAE
+↓
+utiliza o valor absoluto do erro
+
+MSE
+↓
+eleva o erro ao quadrado
+```
+
+Por esse motivo, o MSE é mais sensível a erros grandes.
+
+---
+
+# RMSE — Root Mean Squared Error
+
+O **RMSE** significa:
+
+**Root Mean Squared Error**
+
+Ele é calculado através da raiz quadrada do MSE:
+
+$$
+RMSE = \sqrt{MSE}
+$$
+
+A vantagem é que o resultado volta para a **mesma unidade da variável resposta**.
+
+---
+
+# MAPE — Mean Absolute Percentage Error
+
+O **MAPE** significa:
+
+**Mean Absolute Percentage Error**
+
+Ele calcula o erro médio em **percentual**.
+
+A fórmula apresentada foi:
+
+$$
+MAPE =
+\frac{100}{n}
+\sum_{i=1}^{n}
+\left|
+\frac{y_i-\hat{y}_i}{y_i}
+\right|
+$$
+
+Por exemplo, um MAPE de:
+
+```text
+10%
+```
+
+pode ser interpretado como um erro percentual médio de aproximadamente `10%`.
+
+---
+
+# R² — Coeficiente de Determinação
+
+O **R²** mede quanto da variabilidade dos dados é explicada pelo modelo.
+
+A fórmula apresentada foi:
+
+$$
+R^2 =
+1 -
+\frac{SS_{res}}
+{SS_{tot}}
+$$
+
+Onde:
+
+$$
+SS_{res} =
+\sum(y_i-\hat{y}_i)^2
+$$
+
+e:
+
+$$
+SS_{tot} =
+\sum(y_i-\bar{y})^2
+$$
+
+---
+
+## Interpretação do R²
+
+Na aula:
+
+```text
+R² = 1
+```
+
+indica um ajuste perfeito.
+
+Enquanto:
+
+```text
+R² = 0
+```
+
+indica que o modelo não explica a variabilidade dos dados.
+
+---
+
+# Resumo das métricas de regressão
+
+| Métrica | O que mede                          |
+| ------- | ----------------------------------- |
+| `MAE`   | Erro absoluto médio                 |
+| `MSE`   | Erro quadrático médio               |
+| `RMSE`  | Raiz do erro quadrático médio       |
+| `MAPE`  | Erro percentual médio               |
+| `R²`    | Variabilidade explicada pelo modelo |
+
+---
+
+# Valores Reais vs Preditos
+
+Também foi criado um gráfico comparando:
+
+* Valores reais
+* Valores previstos pelo modelo
+
+Uma linha de referência representa o cenário em que:
+
+```text
+valor real = valor previsto
+```
+
+Quanto mais próximas as previsões estiverem dessa referência, mais próximas estão dos valores reais.
+
+---
+
+# Avaliação de Modelos de Classificação
+
+## O que é classificação?
+
+Em problemas de classificação, o objetivo não é prever um número contínuo.
+
+O objetivo é prever uma **categoria**.
+
+Alguns exemplos apresentados:
+
+* Fraude vs não fraude
+* Churn vs não churn
+* Doença vs saudável
+* Spam vs não spam
+
+Uma classificação binária pode ser representada como:
+
+$$
+y \in \{0,1\}
+$$
+
+Também podem existir problemas com várias classes.
+
+---
+
+# Transformando o problema em classificação
+
+Na aula, o dataset de imóveis foi utilizado novamente.
+
+Dessa vez, o objetivo passou a ser:
+
+> Classificar uma casa como preço alto ou preço baixo.
+
+Foi criada uma variável chamada:
+
+`HighPrice`
+
+Ela compara o valor da casa com a **mediana dos preços**.
+
+Assim, a variável passa a possuir duas classes.
+
+---
+
+# Regressão Logística
+
+A **Regressão Logística** é utilizada para estimar a probabilidade de um registro pertencer a determinada classe.
+
+A função logística apresentada foi:
+
+$$
+P(Y=1|X)=
+\frac{1}
+{1+e^{-(\beta_0+\beta_1x_1+...+\beta_px_p)}}
+$$
+
+O modelo estima a probabilidade de determinado evento ocorrer.
+
+---
+
+# Matriz de Confusão
+
+A **matriz de confusão** compara:
+
+* Classe real
+* Classe prevista pelo modelo
+
+Ela possui quatro resultados possíveis:
+
+|                   | Predito Negativo | Predito Positivo |
+| ----------------- | ---------------- | ---------------- |
+| **Real Negativo** | TN               | FP               |
+| **Real Positivo** | FN               | TP               |
+
+---
+
+## TP — True Positive
+
+O modelo previu positivo e o valor realmente era positivo.
+
+---
+
+## TN — True Negative
+
+O modelo previu negativo e o valor realmente era negativo.
+
+---
+
+## FP — False Positive
+
+O modelo previu positivo, mas o valor real era negativo.
+
+Também chamado de **falso positivo**.
+
+---
+
+## FN — False Negative
+
+O modelo previu negativo, mas o valor real era positivo.
+
+Também chamado de **falso negativo**.
+
+---
+
+# Accuracy — Acurácia
+
+A acurácia mede a proporção total de previsões corretas.
+
+$$
+Accuracy =
+\frac{TP+TN}
+{TP+TN+FP+FN}
+$$
+
+Ela responde à pergunta:
+
+> Qual porcentagem das previsões do modelo está correta?
+
+---
+
+# Precision
+
+**Precision** responde:
+
+> Das previsões positivas feitas pelo modelo, quantas realmente eram positivas?
+
+Sua fórmula é:
+
+$$
+Precision =
+\frac{TP}
+{TP+FP}
+$$
+
+É especialmente importante quando **falsos positivos possuem um custo alto**.
+
+---
+
+# Recall
+
+**Recall** responde:
+
+> Dos casos realmente positivos, quantos foram encontrados pelo modelo?
+
+Sua fórmula é:
+
+$$
+Recall =
+\frac{TP}
+{TP+FN}
+$$
+
+Essa métrica é importante quando **falsos negativos são perigosos**.
+
+Um exemplo apresentado na aula é:
+
+**diagnóstico médico**.
+
+---
+
+# F1 Score
+
+O **F1 Score** combina:
+
+* Precision
+* Recall
+
+em uma única métrica.
+
+Sua fórmula é:
+
+$$
+F1 =
+2 \times
+\frac{Precision \times Recall}
+{Precision + Recall}
+$$
+
+Ele é útil quando queremos encontrar um equilíbrio entre:
+
+* Falsos positivos
+* Falsos negativos
+
+---
+
+# `classification_report`
+
+O Scikit-learn também possui:
+
+`classification_report`
+
+Ele pode ser utilizado para apresentar várias métricas de classificação em um único relatório.
+
+---
+
+# Resumo das métricas de classificação
+
+| Métrica     | Pergunta respondida                                |
+| ----------- | -------------------------------------------------- |
+| `Accuracy`  | Qual a taxa geral de acertos?                      |
+| `Precision` | Das previsões positivas, quantas estavam corretas? |
+| `Recall`    | Dos positivos reais, quantos foram encontrados?    |
+| `F1 Score`  | Qual o equilíbrio entre Precision e Recall?        |
+
+A escolha da métrica depende sempre do **contexto do problema**.
+
+---
+
+# Avaliação de Modelos de Agrupamento
+
+## O que é Clustering?
+
+No **Clustering**, não temos rótulos verdadeiros indicando qual seria a resposta correta.
+
+O objetivo é descobrir grupos e padrões existentes nos próprios dados.
+
+Alguns exemplos apresentados:
+
+* Segmentação de clientes
+* Padrões de consumo
+* Agrupamento de documentos
+* Segmentação de imagens
+
+---
+
+# Como avaliar clusters?
+
+Como não existe uma resposta correta conhecida, são utilizados critérios internos.
+
+A aula destaca duas propriedades importantes:
+
+### Coesão
+
+Indica o quanto os pontos de um mesmo cluster estão próximos entre si.
+
+### Separação
+
+Indica o quanto clusters diferentes estão separados.
+
+---
+
+# Preparação para Clustering
+
+Foram selecionadas algumas variáveis do dataset California Housing:
+
+* `median_income`
+* `housing_median_age`
+* `total_rooms`
+
+Antes do agrupamento, a aula destaca a importância de **padronizar as variáveis**, pois muitas métricas utilizam distância euclidiana.
+
+---
+
+# K-Means
+
+Foi utilizado o algoritmo:
+
+`KMeans`
+
+O K-Means divide os dados em uma quantidade definida de clusters.
+
+Para analisar diferentes quantidades de clusters, foram testados valores de:
+
+```text
+1 até 9 clusters
+```
+
+---
+
+# WSS — Within Sum of Squares
+
+O **WSS** mede a variabilidade existente **dentro dos clusters**.
+
+Sua fórmula é:
+
+$$
+WSS =
+\sum_{k=1}^{K}
+\sum_{i \in C_k}
+||x_i-\mu_k||^2
+$$
+
+Interpretação:
+
+> Valores menores indicam clusters mais compactos.
+
+---
+
+# Elbow Method
+
+O **Elbow Method**, ou **Método do Cotovelo**, utiliza os valores de WSS para observar como a variabilidade muda à medida que aumentamos o número de clusters.
+
+Foi criado um gráfico relacionando:
+
+```text
+Número de clusters
+        ↓
+       WSS
+```
+
+---
+
+# Índice Calinski-Harabasz
+
+O índice **Calinski-Harabasz** compara:
+
+* Dispersão entre clusters
+* Dispersão dentro dos clusters
+
+Sua fórmula apresentada foi:
+
+$$
+CH =
+\frac{Tr(B_k)}
+{Tr(W_k)}
+\times
+\frac{n-k}
+{k-1}
+$$
+
+Onde:
+
+* `Bₖ` → dispersão entre os clusters
+* `Wₖ` → dispersão interna
+
+Interpretação:
+
+> **Valores maiores indicam clusters melhores.**
+
+---
+
+# Índice de Silhueta
+
+O **Silhouette Score** combina:
+
+* Coesão
+* Separação
+
+Sua fórmula é:
+
+$$
+s(i)=
+\frac{b(i)-a(i)}
+{\max(a(i),b(i))}
+$$
+
+Onde:
+
+* `a(i)` → distância média dentro do próprio cluster
+* `b(i)` → distância até o cluster mais próximo
+
+---
+
+## Interpretação do Silhouette Score
+
+```text
+Próximo de 1
+↓
+Clusters bem definidos
+
+Próximo de 0
+↓
+Clusters sobrepostos
+
+Valor negativo
+↓
+Cluster mal definido
+```
+
+Também foi utilizada a função:
+
+`silhouette_samples()`
+
+para calcular o valor individual da silhueta dos registros e visualizar sua distribuição.
+
+---
+
+# Davies-Bouldin Index
+
+O **Davies-Bouldin Index** compara:
+
+* Dispersão interna dos clusters
+* Distância entre os clusters
+
+Sua fórmula apresentada foi:
+
+$$
+DB =
+\frac{1}{K}
+\sum_{i=1}^{K}
+\max_{j \ne i}
+\left(
+\frac{s_i+s_j}{d_{ij}}
+\right)
+$$
+
+Interpretação:
+
+> **Valores menores indicam clusters melhores.**
+
+---
+
+# Dunn Index
+
+O **Dunn Index** compara:
+
+* A menor distância entre clusters
+* O maior diâmetro dentro de um cluster
+
+Sua fórmula é:
+
+$$
+Dunn =
+\frac{
+\min_{i\ne j}d(C_i,C_j)
+}{
+\max_k diam(C_k)
+}
+$$
+
+Interpretação:
+
+> **Valores maiores indicam clusters melhores.**
+
+---
+
+# Resumo das métricas de Clustering
+
+| Métrica             | Interpretação                      |
+| ------------------- | ---------------------------------- |
+| `WSS`               | Menor é melhor                     |
+| `Calinski-Harabasz` | Maior é melhor                     |
+| `Silhouette`        | Quanto mais próximo de `1`, melhor |
+| `Davies-Bouldin`    | Menor é melhor                     |
+| `Dunn`              | Maior é melhor                     |
+
+---
+
+# Escolha da métrica
+
+Nenhuma métrica isolada determina qual é o melhor agrupamento.
+
+A avaliação deve considerar diferentes aspectos ao mesmo tempo:
+
+* Coesão
+* Separação
+* Estabilidade
+* Interpretação do domínio
+
+---
+
+# Fluxo de avaliação de modelos
+
+Podemos resumir o processo apresentado na aula assim:
+
+```text
+Problema
+   ↓
+Escolher o tipo de modelo
+   ↓
+Treinar o modelo
+   ↓
+Gerar previsões ou clusters
+   ↓
+Escolher métricas adequadas
+   ↓
+Avaliar os resultados
+   ↓
+Comparar modelos
+```
+
