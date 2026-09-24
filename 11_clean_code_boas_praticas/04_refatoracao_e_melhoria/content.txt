@@ -1,0 +1,64 @@
+# Refatoração
+
+## O que é refatoração?
+
+**Refatorar** significa melhorar o código **sem alterar seu funcionamento**.
+
+O objetivo não é mudar o resultado final do programa, mas melhorar a forma como o código está escrito.
+
+---
+
+## Melhorando nomes
+
+Por exemplo, uma função chamada:
+
+`calc()`
+
+pode ser substituída por:
+
+`calcular_soma()`
+
+Da mesma forma, parâmetros como:
+
+`a`
+
+e:
+
+`b`
+
+podem ser substituídos por nomes mais claros, como:
+
+`numero1`
+
+e:
+
+`numero2`
+
+O comportamento continua o mesmo, mas o código fica mais fácil de entender.
+
+---
+
+# Simplificando código
+
+A refatoração também pode reduzir a quantidade de código necessária para realizar determinada tarefa.
+
+Na aula, uma função que percorria uma lista, verificava valores maiores que `10` e multiplicava esses valores por `2` foi reescrita de forma mais compacta.
+
+As melhorias destacadas foram:
+
+- Menos código
+- Mais legibilidade
+- Maior facilidade de manutenção
+
+---
+
+# Redução de complexidade
+
+Devemos evitar códigos desnecessariamente complicados.
+
+A recomendação apresentada na aula é preferir:
+
+- Funções simples
+- Código dividido em partes
+
+Separar responsabilidades ajuda a tornar o programa mais fácil de entender e manter.
