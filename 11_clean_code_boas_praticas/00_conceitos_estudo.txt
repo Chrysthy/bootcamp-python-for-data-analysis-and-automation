@@ -1,0 +1,40 @@
+## 📚 Conceitos estudados
+
+Nesta aula foram trabalhados conceitos de:
+
+- Clean Code
+- Boas práticas
+- Legibilidade
+- Nomes de variáveis
+- Funções pequenas
+- Organização de projetos
+- Estrutura de pastas
+- `src`
+- `main.py`
+- `utils.py`
+- `tests`
+- `requirements.txt`
+- Modularização
+- Funções reutilizáveis
+- Testes
+- Testes unitários
+- `assert`
+- Pytest
+- `test_soma()`
+- Refatoração
+- Redução de código
+- Legibilidade
+- Manutenção
+- Redução de complexidade
+- Performance
+- Profiling
+- Módulo `time`
+- `time.time()`
+- Otimização
+- `sum()`
+- Organização
+- Testes automatizados
+
+
+
+
