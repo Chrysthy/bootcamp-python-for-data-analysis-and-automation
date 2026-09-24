@@ -151,3 +151,69 @@ y_pred_custom = (y_probs > threshold).astype(int)
 print(classification_report(y_test, y_pred_custom))
 
 
+# Modelo Avançado - XGBoot
+
+
+from xgboost import XGBClassifier
+
+xgb = XGBClassifier(
+    scale_pos_weight = 10, # ajuda com desbalanceamento
+    use_label_encoder=False,
+    eval_metric="logloss"
+)
+
+xgb.fit(x_train, y_train)
+
+y_pred_xgb = xgb.predict(x_test)
+
+
+print(classification_report(y_test, y_pred_xgb))
+
+# Importância das Variáveis
+# Ajuda a entender quais variáveis influenciam mais o modelo.
+
+
+import matplotlib.pyplot as plt
+
+importancias = xgb.feature_importances_
+
+plt.bar(range(len(importancias)), importancias)
+plt.title("Importância das Variáveis")
+plt.show()
+
+# Ajuste de Hiperparâmetros
+# Testamos várias combinações para melhorar o modelo.
+
+
+from sklearn.model_selection import GridSearchCV
+
+param_grid = {
+    "max_depth": [3, 5],
+    "n_estimators": [50, 100]
+}
+
+grid = GridSearchCV(
+    XGBClassifier(eval_metric="logloss"),
+    param_grid,
+    cv=3,
+    scoring="recall"
+)
+
+grid.fit(x_train, y_train)
+
+print("Melhor Modelo:", grid.best_params_)
+
+
+
+# Explicabilidade (SHAP)
+# SHAP mostra como cada variável influencia a decisão do modelo.
+
+
+import shap
+
+explainer = shap.Explainer(xgb)
+
+shap_values = explainer(x_test[:100])
+
+shap.plots.bar(shap_values)
+
