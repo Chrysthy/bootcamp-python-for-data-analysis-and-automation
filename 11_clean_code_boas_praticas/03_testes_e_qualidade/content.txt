@@ -1,0 +1,53 @@
+# Testes
+
+## O que são testes?
+
+Testes ajudam a verificar se o código está funcionando corretamente.
+
+Eles ajudam a:
+
+- Evitar erros
+- Validar funcionalidades
+- Facilitar a manutenção
+
+Quando modificamos uma parte do programa, os testes também podem ajudar a verificar se o comportamento esperado continua funcionando.
+
+---
+
+# Testes unitários
+
+**Testes unitários** verificam pequenas partes do programa.
+
+Na aula, foi testada uma função de soma.
+
+A ideia era verificar se:
+
+`2 + 3`
+
+retornava:
+
+`5`
+
+---
+
+## `assert`
+
+O `assert` pode ser utilizado para verificar se determinada condição é verdadeira.
+
+No exemplo da aula, ele verifica se o resultado produzido pela função corresponde ao resultado esperado.
+
+Se a condição estiver correta, o teste passa.
+
+---
+
+# Pytest
+
+**Pytest** é uma ferramenta utilizada para criar testes automatizados em Python.
+
+Um teste pode ser criado utilizando uma função específica para verificar o comportamento de outra função.
+
+Por exemplo:
+
+`test_soma()`
+
+pode verificar se uma função responsável por somar valores retorna o resultado esperado.
