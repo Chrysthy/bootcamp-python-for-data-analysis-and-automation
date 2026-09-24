@@ -1,4 +1,4 @@
-## 📚 Conceitos estudados
+## 📚 Conceitos estudados - Part 1
 
 Nesta aula foram trabalhados conceitos de:
 
@@ -34,6 +34,59 @@ Nesta aula foram trabalhados conceitos de:
 - `sum()`
 - Organização
 - Testes automatizados
+
+
+
+## 📚 Conceitos estudados - Part 2
+
+Nesta aula foram trabalhados conceitos de:
+
+- Avaliação de modelos
+- Machine Learning
+- Overfitting
+- Underfitting
+- Erro
+- Resíduo
+- Regressão
+- Regressão Linear
+- `LinearRegression`
+- `fit()`
+- `predict()`
+- `train_test_split()`
+- `get_dummies()`
+- Diagnóstico de resíduos
+- MAE
+- MSE
+- RMSE
+- MAPE
+- R²
+- Coeficiente de Determinação
+- Valores reais vs previstos
+- Classificação
+- Classificação binária
+- Regressão Logística
+- `LogisticRegression`
+- Matriz de Confusão
+- True Positive
+- True Negative
+- False Positive
+- False Negative
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- `classification_report`
+- Clustering
+- Coesão
+- Separação
+- K-Means
+- WSS
+- Elbow Method
+- Calinski-Harabasz
+- Silhouette Score
+- Davies-Bouldin Index
+- Dunn Index
+- Avaliação de agrupamentos
 
 
 
