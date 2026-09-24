@@ -1,0 +1,62 @@
+# 📂 Boas Práticas, Testes e Otimização de Código em Python
+
+## Introdução às boas práticas
+
+Um código não deve apenas funcionar. Ele também deve ser **organizado, claro e fácil de manter**.
+
+Na programação, o código costuma ser lido muitas vezes durante seu desenvolvimento e manutenção. Por isso, escrever de forma clara facilita tanto o trabalho de quem criou o programa quanto de outras pessoas que precisarem entendê-lo depois.
+
+---
+
+# Clean Code
+
+## O que é Clean Code?
+
+**Clean Code** significa escrever um código que seja:
+
+- Fácil de ler
+- Fácil de entender
+- Fácil de manter
+
+Um código bem escrito deve deixar claro o que está acontecendo sem exigir esforço desnecessário para interpretá-lo.
+
+---
+
+## Exemplo de código pouco claro
+
+Um código pode funcionar, mas ainda ser difícil de entender quando utiliza nomes genéricos como:
+
+`X`
+
+`Y`
+
+`Z`
+
+Esses nomes não explicam o significado das informações armazenadas.
+
+---
+
+## Código mais claro
+
+Uma forma de melhorar o código é utilizar nomes que representem o que cada variável faz.
+
+Por exemplo:
+
+- `numero1`
+- `numero2`
+- `soma`
+
+Assim, conseguimos entender a intenção do código apenas observando os nomes utilizados.
+
+---
+
+# Regras importantes
+
+Algumas boas práticas apresentadas na aula são:
+
+- Utilizar nomes claros
+- Criar funções pequenas
+- Evitar "mágica" no código
+- Comentar apenas quando necessário
+
+O objetivo é deixar o código mais simples e compreensível.
