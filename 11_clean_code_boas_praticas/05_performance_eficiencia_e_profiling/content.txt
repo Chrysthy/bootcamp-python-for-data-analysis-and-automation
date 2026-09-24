@@ -1,0 +1,100 @@
+# Performance
+
+## O que é performance?
+
+**Performance** está relacionada à velocidade e à eficiência do código.
+
+Um código pode produzir o resultado correto, mas ainda assim utilizar mais tempo ou recursos do que o necessário.
+
+---
+
+# Profiling
+
+## O que é Profiling?
+
+**Profiling** significa analisar o desempenho do código.
+
+Na aula, o módulo `time` foi utilizado para medir quanto tempo uma operação demorava para ser executada.
+
+A lógica consiste em:
+
+1. Registrar o horário antes da execução
+2. Executar a operação
+3. Registrar o horário depois
+4. Calcular a diferença
+
+Assim, conseguimos medir o tempo utilizado pelo código.
+
+---
+
+## `time.time()`
+
+O método:
+
+`time.time()`
+
+foi utilizado para registrar o tempo antes e depois da execução.
+
+A diferença entre esses dois valores representa aproximadamente o tempo gasto pelo trecho analisado.
+
+---
+
+# Melhorando a performance
+
+Uma das formas de melhorar o desempenho é utilizar recursos já disponíveis no Python.
+
+Na aula, para somar uma grande quantidade de números foi utilizada:
+
+`sum()`
+
+Em vez de criar manualmente toda a lógica de soma, podemos utilizar uma função própria da linguagem para realizar a operação.
+
+---
+
+# Projeto Final
+
+No projeto final foram reunidos os principais conceitos apresentados durante a aula:
+
+- Organização
+- Função reutilizável
+- Teste
+- Performance
+
+Foi criada uma função chamada:
+
+`calcular_total_vendas()`
+
+Ela recebe uma coleção de valores de vendas e retorna a soma utilizando:
+
+`sum()`
+
+No exemplo utilizado:
+
+```
+100 + 200 + 300 + 400
+```
+
+o resultado foi:
+
+```
+1000
+```
+
+Esse exemplo reúne a ideia de criar uma função simples, reutilizável e fácil de compreender.
+
+---
+
+# Fluxo de desenvolvimento com boas práticas
+
+Um processo básico pode seguir esta lógica:
+
+1. Escrever um código claro
+2. Utilizar nomes que expliquem sua finalidade
+3. Dividir responsabilidades
+4. Organizar o projeto em arquivos e pastas
+5. Criar funções reutilizáveis
+6. Criar testes
+7. Refatorar quando necessário
+8. Reduzir complexidade
+9. Analisar a performance
+10. Melhorar o código mantendo seu funcionamento
