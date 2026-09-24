@@ -1,0 +1,88 @@
+# Organização de Projetos
+
+## Estrutura de pastas
+
+Projetos organizados facilitam a manutenção.
+
+Um exemplo de estrutura apresentado na aula é:
+
+```
+projeto/
+│
+├── src/
+│   ├── main.py
+│   └── utils.py
+│
+├── tests/
+│   └── test_utils.py
+│
+├── data/
+│
+└── requirements.txt
+```
+
+Cada pasta ou arquivo possui uma responsabilidade dentro do projeto.
+
+---
+
+## `src/`
+
+A pasta `src` pode armazenar o código principal da aplicação.
+
+Por exemplo:
+
+### `main.py`
+
+Responsável pela execução principal do programa.
+
+### `utils.py`
+
+Pode armazenar funções auxiliares utilizadas por outras partes do projeto.
+
+---
+
+## `tests/`
+
+A pasta `tests` é utilizada para armazenar os testes do projeto.
+
+Por exemplo:
+
+`test_utils.py`
+
+pode conter testes das funções presentes em `utils.py`.
+
+---
+
+## `data/`
+
+Pode ser utilizada para organizar os dados utilizados pelo projeto.
+
+---
+
+## `requirements.txt`
+
+Arquivo utilizado para organizar as dependências necessárias para executar o projeto.
+
+---
+
+# Modularização
+
+**Modularizar** significa dividir o código em partes com responsabilidades diferentes.
+
+Na aula, o exemplo apresentado foi:
+
+- Cálculos → `utils.py`
+- Execução → `main.py`
+- Testes → `tests/`
+
+Essa separação ajuda a manter o projeto organizado.
+
+---
+
+# Funções reutilizáveis
+
+Uma função pode ser criada em um módulo separado e depois utilizada em outras partes do programa.
+
+Por exemplo, uma função responsável por calcular uma soma pode ser criada uma única vez e reutilizada sempre que o cálculo for necessário.
+
+Isso ajuda a evitar repetição de código.
